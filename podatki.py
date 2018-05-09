@@ -35,11 +35,8 @@ osnovni_vzorec = re.compile(
    ", "
    "(?P<Postna_stevilka>\d\d\d\d) "
    "(?P<Kraj>\w+)"
-   "&nbsp.*Spletna stran: <a href=\"http:\/\/w+."
-   "(?P<Kratica>\w*)"
-   ".*target=\"_blank\">"
-
-    
+   "&nbsp.*Izvaja: <a class=\"p\" href=\""
+    "(?P<Spletna_stran>.*\.html)"
     )
 
 
@@ -60,19 +57,15 @@ def seznam_iz_podatkov(imenik, vzorec):
         print(a)
     return sez
 
-#seznam_podatkov = seznam_iz_podatkov('faks', osnovni_vzorec)
+seznam_podatkov = seznam_iz_podatkov('faks', osnovni_vzorec)
 
 def download_faksi(podatki):
     dolzina = len(podatki)
     for i in range(0, dolzina):
-        naziv=str.lower(podatki[i]['Naziv'])
-        novo = naziv.replace(" ", "-")
-        kratica=podatki[i]["Kratica"]
-        skupaj=kratica + "-" + novo
-        faks_url = 'http://studentski.net/studij/{}.html'.format(skupaj)
+        faks_url = 'http://studentski.net' + podatki[i]["Spletna_stran"]
         stran = requests.get(faks_url)
         text = stran.text
-        datoteka_ime = '{}.html'.format(naziv)
+        datoteka_ime = '{}.html'.format(podatki[i]["Naziv"])
         shrani_text(text, 'univerze', datoteka_ime)
         print(i)
 
