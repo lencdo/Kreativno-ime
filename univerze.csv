@@ -1,0 +1,337 @@
+ID,Naziv,Ulica,Kraj,Postna_stevilka,Smer,Stopnja
+0,Akademija za glasbo,Stari trg 34,Ljubljana,1000,Glasbena pedagogika,UNI
+1,Akademija za glasbo,Stari trg 34,Ljubljana,1000,Glasbena umetnost,UNI
+2,Akademija za glasbo,Stari trg 34,Ljubljana,1000,Glasbena pedagogika,MAG
+3,Akademija za glasbo,Stari trg 34,Ljubljana,1000,Glasbena umetnost,MAG
+4,Akademija za glasbo,Stari trg 34,Ljubljana,1000,Glasbeno-teoretska pedagogika,MAG
+5,Akademija za glasbo,Stari trg 34,Ljubljana,1000,Instrumentalna in pevska pedagogika,MAG
+6,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Dramaturgija in scenske umetnosti,UNI
+7,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Dramska igra,UNI
+8,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Film in televizija - Smer filmska in televizijska montaža,UNI
+9,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Film in televizija - Smer filmska in televizijska režija,UNI
+10,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Film in televizija - Smer filmsko in televizijsko snemanje,UNI
+11,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Gledališka režija,UNI
+12,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Dramaturgija in scenske umetnosti,MAG
+13,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Dramska igra,MAG
+14,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Filmski in televizijski študiji,MAG
+15,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Filmsko in televizijsko ustvarjanje,MAG
+16,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Gledališka in radijska režija,MAG
+17,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Oblike govora,MAG
+18,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Scensko oblikovanje,MAG
+19,"Akademija za gledališèe, radio, film in televizijo",Nazorjeva ulica 3,Ljubljana,1000,Umetnost giba,MAG
+20,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Industrijsko in unikatno oblikovanje - Smer industrijsko oblikovanje,UNI
+21,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Industrijsko in unikatno oblikovanje - Smer unikatno oblikovanje,UNI
+22,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Kiparstvo,UNI
+23,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Konserviranje in restavriranje likovnih del,UNI
+24,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Oblikovanje vizualnih komunikacij - Smer fotografija,UNI
+25,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Oblikovanje vizualnih komunikacij - Smer grafièno oblikovanje,UNI
+26,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Oblikovanje vizualnih komunikacij - Smer ilustracija,UNI
+27,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Slikarstvo - Smer slikarstvo,UNI
+28,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Slikarstvo - Smer video in novi mediji,UNI
+29,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Industrijsko in unikatno oblikovanje,MAG
+30,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Kiparstvo,MAG
+31,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Konserviranje in restavriranje likovnih del,MAG
+32,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Oblikovanje vizualnih komunikacij,MAG
+33,Akademija za likovno umetnost in oblikovanje,Erjavèeva cesta 23,Ljubljana,1000,Slikarstvo,MAG
+34,Alma Mater Europaea - Akademija za ples,Kardeljeva plošèad 1,Ljubljana,1000,"Ples, koreografija - balet",VSŠ
+35,Alma Mater Europaea - Akademija za ples,Kardeljeva plošèad 1,Ljubljana,1000,"Ples, koreografija - džez",VSŠ
+36,Alma Mater Europaea - Akademija za ples,Kardeljeva plošèad 1,Ljubljana,1000,"Ples, koreografija - sodobni ples",VSŠ
+37,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Arhivistika (Ljubljana),VSŠ
+38,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Arhivistika (Maribor),VSŠ
+39,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Fizioterapija (Koper),VSŠ
+40,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Fizioterapija (Koper) (v italijanšèini),VSŠ
+41,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Fizioterapija (Maribor),VSŠ
+42,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Management poslovnih sistemov (Maribor),VSŠ
+43,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Management poslovnih sistemov (študij na daljavo),VSŠ
+44,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (Koper),VSŠ
+45,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (Ljubljana),VSŠ
+46,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (Maribor),VSŠ
+47,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (študij na daljavo),VSŠ
+48,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Zdravstvena nega (Murska Sobota),VSŠ
+49,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Arhivistika in dokumentologija,MAG
+50,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Arhivistika in dokumentologija (Ljubljana),MAG
+51,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Ekoremediacije,MAG
+52,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Evropske poslovne študije,MAG
+53,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Evropske poslovne študije (na daljavo),MAG
+54,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Management poslovnih sistemov,MAG
+55,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Management poslovnih sistemov (na daljavo),MAG
+56,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Projektni management,DR
+57,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija,MAG
+58,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija,DR
+59,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (Ljubljana),MAG
+60,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (Ljubljana),DR
+61,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Socialna gerontologija (na daljavo),MAG
+62,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Strateški komunikacijski management,DR
+63,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Zdravstvene vede,MAG
+64,Alma Mater Europaea - Evropski Center Maribor,Slovenska ulica 17,Maribor,2000,Zdravstvene vede (Murska Sobota),MAG
+65,"Alma Mater Europaea - Institutum Studiorum Humanitatis, fakulteta za podiplomski humanistièni študij, Ljubljana",Kardeljeva plošèad 1,Ljubljana,1000,Humanistièni študiji (Ljubljana),VSŠ
+66,"Alma Mater Europaea - Institutum Studiorum Humanitatis, fakulteta za podiplomski humanistièni študij, Ljubljana",Kardeljeva plošèad 1,Ljubljana,1000,Humanistièni študiji (študij na daljavo),VSŠ
+67,"Alma Mater Europaea - Institutum Studiorum Humanitatis, fakulteta za podiplomski humanistièni študij, Ljubljana",Kardeljeva plošèad 1,Ljubljana,1000,Humanistiène znanosti,MAG
+68,"Alma Mater Europaea - Institutum Studiorum Humanitatis, fakulteta za podiplomski humanistièni študij, Ljubljana",Kardeljeva plošèad 1,Ljubljana,1000,Humanistiène znanosti,DR
+69,"B&B visoka šola za trajnostni razvoj, Kranj",Ljubljanska cesta 30,Kranj,4000,Varstvo okolja,VSŠ
+70,"B2 Visoka šola za poslovne vede, Ljubljana",Tržaška cesta 42,Ljubljana,1000,Poslovna informatika,VSŠ
+71,"B2 Visoka šola za poslovne vede, Ljubljana",Tržaška cesta 42,Ljubljana,1000,Tržno komuniciranje in odnosi z javnostmi,VSŠ
+72,"B2 Visoka šola za poslovne vede, Ljubljana",Tržaška cesta 42,Ljubljana,1000,Management in informatika,MAG
+73,"B2 Visoka šola za poslovne vede, Ljubljana",Tržaška cesta 42,Ljubljana,1000,Trženje,MAG
+74,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Biologija,UNI
+75,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Biotehnologija,UNI
+76,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Gozdarstvo,VSŠ
+77,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Gozdarstvo in obnovljivi gozdni viri,UNI
+78,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Kmetijstvo - agronomija,UNI
+79,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Kmetijstvo - agronomija in hortikultura,VSŠ
+80,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Kmetijstvo - živinoreja,VSŠ
+81,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Kmetijstvo - zootehnika,UNI
+82,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Krajinska arhitektura,UNI
+83,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Lesarsko inženirstvo,VSŠ
+84,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Lesarstvo,UNI
+85,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Mikrobiologija,UNI
+86,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Živilstvo in prehrana,UNI
+87,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Agronomija,MAG
+88,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Biomedicina,DR
+89,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Biotehnologija,MAG
+90,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Bioznanosti,DR
+91,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Ekologija in biodiverziteta,MAG
+92,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Ekonomika naravnih virov,MAG
+93,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Gozdarstvo in upravljanje gozdnih ekosistemov,MAG
+94,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Hortikultura,MAG
+95,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Krajinska arhitektura,MAG
+96,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Lesarstvo,MAG
+97,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Mikrobiologija,MAG
+98,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Molekulska in funkcionalna biologija,MAG
+99,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Prehrana,MAG
+100,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Statistika,DR
+101,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Uporabna statistika,MAG
+102,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Varstvo okolja,DR
+103,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Živilstvo,MAG
+104,Biotehniška fakulteta,Jamnikarjeva ulica 101,Ljubljana,1000,Znanost o živalih,MAG
+105,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,"Marketing, družbeni mediji in odnosi z javnostmi  (Maribor)",VSŠ
+106,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,"Marketing, družbeni mediji in odnosi z javnostmi  (Slovenija, e-študij)",VSŠ
+107,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,"Menedžment v sociali in izobraževanju (Slovenije, e-študij)",VSŠ
+108,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,Poslovanje in upravljanje v turizmu (Maribor),VSŠ
+109,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,"Poslovanje in upravljanje v turizmu (Slovenija, e-študij)",VSŠ
+110,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,Poslovanje (Maribor),VSŠ
+111,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,"Poslovanje (Slovenija, e-študij)",VSŠ
+112,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,Inovativni management v sociali in izobraževanju,MAG
+113,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,Marketing in prodaja,MAG
+114,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,Mednarodno poslovanje,MAG
+115,"DOBA, Fakulteta za uporabne poslovne in družbene študije Maribor",Prešernova ulica 1,Maribor,2000,Menedžment pametnih mest,MAG
+116,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Univerzitetna poslovna in ekonomska šola,UNI
+117,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Visoka poslovna šola (Ljubljana),VSŠ
+118,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Banèni in finanèni management,MAG
+119,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Denar in finance,MAG
+120,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Ekonomija,MAG
+121,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Ekonomske in poslovne vede,DR
+122,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Javni sektor in ekonomika okolja,MAG
+123,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Kvantitativne finance in aktuarstvo,MAG
+124,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Management,MAG
+125,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Management in ekonomika v zdravstvenem varstvu,MAG
+126,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Management v športu,MAG
+127,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Mednarodno poslovanje,MAG
+128,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Podjetništvo,MAG
+129,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Poslovna informatika,MAG
+130,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Poslovna logistika,MAG
+131,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Poslovodenje in organizacija,MAG
+132,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Raèunovodstvo in revizija,MAG
+133,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Statistika,DR
+134,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Trženje,MAG
+135,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Turistièni management (EMTM),MAG
+136,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Turizem,MAG
+137,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Uporabna statistika,MAG
+138,Ekonomska fakulteta,Kardeljeva plošèad 17,Ljubljana,1000,Varstvo okolja,DR
+139,Ekonomsko-poslovna fakulteta,Razlagova 14,Maribor,2000,Ekonomske in poslovne vede,UNI
+140,Ekonomsko-poslovna fakulteta,Razlagova 14,Maribor,2000,Poslovna ekonomija,VSŠ
+141,Ekonomsko-poslovna fakulteta,Razlagova 14,Maribor,2000,Ekonomske in poslovne vede,MAG
+142,Ekonomsko-poslovna fakulteta,Razlagova 14,Maribor,2000,Ekonomske in poslovne vede,DR
+143,EMUNI University,Sonèna pot 20,Portorož,6320,Intercultural Business Communication,MAG
+144,Fakulteta za arhitekturo,Zoisova cesta 12,Ljubljana,1000,Urbanizem,UNI
+145,Fakulteta za arhitekturo,Zoisova cesta 12,Ljubljana,1000,Arhitektura,DR
+146,Fakulteta za arhitekturo,Zoisova cesta 12,Ljubljana,1000,Urbanizem,MAG
+147,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Družboslovna informatika,UNI
+148,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Komunikologija - medijske in komunikacijske študije,UNI
+149,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Komunikologija - tržno komuniciranje in odnosi z javnostmi,UNI
+150,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Kulturologija,UNI
+151,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Mednarodni odnosi,UNI
+152,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Novinarstvo,UNI
+153,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Obramboslovje,UNI
+154,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Politologija - javne politike in uprava,UNI
+155,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Politologija - študije politike in države,UNI
+156,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Sociologija,UNI
+157,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Sociologija - kadrovski menedžment,UNI
+158,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Družboslovna informatika,MAG
+159,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Evropske študije,MAG
+160,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Humanistika in družboslovje,DR
+161,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Komunikologija,MAG
+162,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Kulturologija – kulturne in religijske študije,MAG
+163,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Mednarodni odnosi,MAG
+164,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Novinarske študije,MAG
+165,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Obramboslovje,MAG
+166,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Politologija – analiza politik in javna uprava,MAG
+167,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Politologija – politièna teorija,MAG
+168,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Sociologija,MAG
+169,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,"Sociologija - upravljanje organizacij, èloveških virov in znanja",MAG
+170,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Statistika,DR
+171,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Strateško tržno komuniciranje,MAG
+172,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Uporabna statistika,MAG
+173,Fakulteta za družbene vede,Kardeljeva plošèad 5,Ljubljana,1000,Varstvo okolja,DR
+174,"Fakulteta za državne in evropske študije, Kranj",Predoslje 39,Kranj,4000,Javna uprava,UNI
+175,"Fakulteta za državne in evropske študije, Kranj",Predoslje 39,Kranj,4000,Upravno pravo,VSŠ
+176,"Fakulteta za državne in evropske študije, Kranj",Predoslje 39,Kranj,4000,Javna uprava,MAG
+177,"Fakulteta za državne in evropske študije, Kranj",Predoslje 39,Kranj,4000,Javna uprava,DR
+178,"Fakulteta za državne in evropske študije, Kranj",Predoslje 39,Kranj,4000,Mednarodne in diplomatske študije,MAG
+179,"Fakulteta za državne in evropske študije, Kranj",Predoslje 39,Kranj,4000,Mednarodne in diplomatske študije,DR
+180,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Elektrotehnika,VSŠ
+181,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Elektrotehnika,UNI
+182,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Informatika in tehnologije komuniciranja,VSŠ
+183,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Informatika in tehnologije komuniciranja,UNI
+184,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Medijske komunikacije,UNI
+185,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Mehatronika,VSŠ
+186,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Mehatronika,UNI
+187,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Raèunalništvo in informacijske tehnologije,VSŠ
+188,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Raèunalništvo in informacijske tehnologije,UNI
+189,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Telekomunikacije,UNI
+190,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Elektrotehnika,MAG
+191,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Elektrotehnika,DR
+192,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Informatika in tehnologije komuniciranja,MAG
+193,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Medijske komunikacije,MAG
+194,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Medijske komunikacije,DR
+195,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Mehatronika,MAG
+196,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Raèunalništvo in informacijske tehnologije,MAG
+197,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Raèunalništvo in informatika,DR
+198,"Fakulteta za elektrotehniko, raèunalništvo in informatiko",Smetanova ulica 17,Maribor,2000,Telekomunikacije,MAG
+199,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Aplikativna elektrotehnika,VSŠ
+200,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Elektrotehnika,UNI
+201,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Multimedija,UNI
+202,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Bioznanosti,DR
+203,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Elektrotehnika,MAG
+204,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Elektrotehnika,DR
+205,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Multimedija,MAG
+206,Fakulteta za elektrotehniko,Tržaška cesta 25,Ljubljana,1000,Uporabna statistika,MAG
+207,Fakulteta za energetiko,Hoèevarjev trg 1,Krško,8270,Energetika,VSŠ
+208,Fakulteta za energetiko,Hoèevarjev trg 1,Krško,8270,Energetika,UNI
+209,Fakulteta za energetiko,Hoèevarjev trg 1,Krško,8270,Energetika,MAG
+210,Fakulteta za energetiko,Hoèevarjev trg 1,Krško,8270,Energetika,DR
+211,Fakulteta za farmacijo,Aškerèeva cesta 7,Ljubljana,1000,Kozmetologija,UNI
+212,Fakulteta za farmacijo,Aškerèeva cesta 7,Ljubljana,1000,Laboratorijska biomedicina,UNI
+213,Fakulteta za farmacijo,Aškerèeva cesta 7,Ljubljana,1000,Biomedicina,DR
+214,Fakulteta za farmacijo,Aškerèeva cesta 7,Ljubljana,1000,Industrijska farmacija,MAG
+215,Fakulteta za farmacijo,Aškerèeva cesta 7,Ljubljana,1000,Laboratorijska biomedicina,MAG
+216,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Arhitektura,UNI
+217,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Gospodarsko inženirstvo - smer gradbeništvo,UNI
+218,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Gradbeništvo,VSŠ
+219,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Gradbeništvo,UNI
+220,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Prometno inženirstvo,VSŠ
+221,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Prometno inženirstvo,UNI
+222,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Arhitektura,MAG
+223,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Arhitektura (v anglešèini),MAG
+224,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Gospodarsko inženirstvo – smer gradbeništvo,MAG
+225,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Gradbeništvo,MAG
+226,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Gradbeništvo,DR
+227,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Informacijske tehnologije v gradbeništvu,MAG
+228,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Prometno inženirstvo,MAG
+229,Fakulteta za gradbeništvo,Smetanova ulica 17,Maribor,2000,Prometno inženirstvo,DR
+230,Fakulteta za kemijo in kemijsko tehnologijo,Smetanova ulica 17,Maribor,2000,Kemija,UNI
+231,Fakulteta za kemijo in kemijsko tehnologijo,Smetanova ulica 17,Maribor,2000,Kemijska tehnologija,VSŠ
+232,Fakulteta za kemijo in kemijsko tehnologijo,Smetanova ulica 17,Maribor,2000,Kemijska tehnologija,UNI
+233,Fakulteta za kemijo in kemijsko tehnologijo,Smetanova ulica 17,Maribor,2000,Kemija,MAG
+234,Fakulteta za kemijo in kemijsko tehnologijo,Smetanova ulica 17,Maribor,2000,Kemija in kemijska tehnika,DR
+235,Fakulteta za kemijo in kemijsko tehnologijo,Smetanova ulica 17,Maribor,2000,Kemijska tehnika,MAG
+236,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Agrikultura in okolje,UNI
+237,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,"Agronomija - okrasne rastline, zelenjava in poljšèine",VSŠ
+238,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Biosistemsko inženirstvo,VSŠ
+239,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Ekološko kmetijstvo,VSŠ
+240,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Management v agroživilstvu in razvoj podeželja,VSŠ
+241,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,"Vinogradništvo, vinarstvo in sadjarstvo",VSŠ
+242,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Živinoreja,VSŠ
+243,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Agrarna ekonomika,MAG
+244,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Agrarna ekonomika,DR
+245,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Kmetijstvo,MAG
+246,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Kmetijstvo,DR
+247,Fakulteta za kmetijstvo in biosistemske vede,Pivola 10,Hoèe,2311,Varnost hrane v prehrambni verigi,MAG
+248,Fakulteta za logistiko,Mariborska cesta 7,Celje,3000,Gospodarska in tehniška logistika,VSŠ
+249,Fakulteta za logistiko,Mariborska cesta 7,Celje,3000,Logistika sistemov,UNI
+250,Fakulteta za logistiko,Mariborska cesta 7,Celje,3000,Logistika sistemov,MAG
+251,Fakulteta za logistiko,Mariborska cesta 7,Celje,3000,Logistika sistemov,DR
+252,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management,VSŠ
+253,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management,UNI
+254,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management (v anglešèini),UNI
+255,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Ekonomija in finance,MAG
+256,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Ekonomija in finance (v anglešèini),MAG
+257,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Inoviranje in podjetništvo,MAG
+258,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management,MAG
+259,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management,DR
+260,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management trajnostnega razvoja,MAG
+261,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Management (v anglešèini),MAG
+262,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Politologija,MAG
+263,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Politologija (v anglešèini),MAG
+264,Fakulteta za management Koper,Cankarjeva ulica 5,Koper,6104,Pravo za management,MAG
+265,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Bioinformatika,UNI
+266,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Bioinformatika (v anglešèini),UNI
+267,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Biopsihologija,UNI
+268,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematika,UNI
+269,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematika (v anglešèini),UNI
+270,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematika v ekonomiji in financah,UNI
+271,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Raèunalništvo in informatika,UNI
+272,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Raèunalništvo in informatika (v anglešèini),UNI
+273,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Sredozemsko kmetijstvo,UNI
+274,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Varstvena biologija,UNI
+275,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Biopsihologija,MAG
+276,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematiène znanosti,MAG
+277,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematiène znanosti,DR
+278,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematiène znanosti (v anglešèini),MAG
+279,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematiène znanosti (v anglešèini),DR
+280,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Matematika s finanènim inženiringom,MAG
+281,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Raèunalništvo in informatika,MAG
+282,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Raèunalništvo in informatika,DR
+283,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Trajnostno grajeno okolje (Izola),MAG
+284,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Uporabna psihologija,MAG
+285,"Fakulteta za matematiko, naravoslovje in informacijske tehnologije Koper",Glagoljaška ulica 8,Koper,6000,Varstvo narave,MAG
+286,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Inženiring poslovnih sistemov,VSŠ
+287,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Inženiring poslovnih sistemov,UNI
+288,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Management v športu,VSŠ
+289,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management informacijskih sistemov,VSŠ
+290,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management informacijskih sistemov,UNI
+291,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management kadrovskih in izobraževalnih sistemov,VSŠ
+292,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management kadrovskih in izobraževalnih sistemov,UNI
+293,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Inženiring poslovnih sistemov,MAG
+294,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Management v zdravstvu in socialnem varstvu,MAG
+295,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management informacijskih sistemov,MAG
+296,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management informacijskih sistemov,DR
+297,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management kadrovskih in izobraževalnih sistemov,MAG
+298,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management kadrovskih in izobraževalnih sistemov,DR
+299,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management poslovnih in delovnih sistemov,MAG
+300,Fakulteta za organizacijske vede,Kidrièeva cesta 55a,Kranj,4000,Organizacija in management poslovnih in delovnih sistemov,DR
+301,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Kulturni turizem,UNI
+302,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Management turistiènih destinacij (Ljubljana),VSŠ
+303,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Management turistiènih podjetij,VSŠ
+304,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Management turistiènih podjetij (v anglešèini),VSŠ
+305,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Turizem,UNI
+306,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Dedišèinski turizem,MAG
+307,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Inovativni turizem,DR
+308,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Management trajnostnega razvoja,MAG
+309,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Turizem,MAG
+310,Fakulteta za turistiène študije Portorož - Turistica,Obala 11a,Portorož,6320,Turizem (Ljubljana),MAG
+311,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Aplikativna kineziologija,UNI
+312,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Prehransko svetovanje - dietetika,VSŠ
+313,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Zdravstvena nega (Izola),VSŠ
+314,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Zdravstvena nega (Nova Gorica),VSŠ
+315,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Aplikativna kineziologija,MAG
+316,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Aplikativna kineziologija,DR
+317,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Dietetika,MAG
+318,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Management trajnostnega razvoja,MAG
+319,Fakulteta za vede o zdravju Izola,Polje 42,Izola,6310,Zdravstvena nega,MAG
+320,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Pedagogika,UNI
+321,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Predšolska vzgoja (Koper),VSŠ
+322,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Predšolska vzgoja (Novo mesto),VSŠ
+323,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Predšolska vzgoja (Škofja Loka),VSŠ
+324,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Predšolska vzgoja (za zavode z italijanskim uènim jezikom),UNI
+325,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Razredni pouk,UNI
+326,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Razredni pouk (za zavode z italijanskim uènim jezikom),UNI
+327,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Edukacijske vede,DR
+328,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Inkluzivna pedagogika,MAG
+329,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Inkluzivna pedagogika (Škofja Loka),MAG
+330,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Izobraževanje odraslih in razvoj kariere,MAG
+331,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Razredni pouk,MAG
+332,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Socialna pedagogika,MAG
+333,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Zgodnje uèenje,MAG
+334,Pedagoška fakulteta Koper,Cankarjeva ulica 5,Koper,6000,Zgodnje uèenje,DR
+335,Visoka šola za vinogradništvo in vinarstvo,Vipavska cesta 13,Ajdovšèina,5270,Vinogradništvo in vinarstvo,VSŠ
