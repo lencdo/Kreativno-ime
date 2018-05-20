@@ -1,7 +1,6 @@
 import auth
 
 
-
 import psycopg2, psycopg2.extensions, psycopg2.extras
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
 
@@ -45,12 +44,6 @@ def uvozi_podatke_studenti():
             #cur.fetchone()
     conn.commit()
 
-def studenti_spol(spol):
-    cur.execute("""
-        SELECT * FROM studenti
-        WHERE spol == %s
-    """, [stevilo])
-    return cur.fetchall()
 
 def ustvari_tabelo_univerze():
     cur.execute("""
