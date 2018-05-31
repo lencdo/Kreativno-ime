@@ -41,13 +41,13 @@ def static(filename):
 @get('/')
 def index():
     #cur.execute("SELECT * FROM oseba ORDER BY priimek, ime")
-    return template('index.html', osebe=cur)
+    return template('index1.html', osebe=cur)
 
 
 ######################################################################
 # Glavni program
 
-# priklopimo se na bazo
+# priklopimo se na bazo5
 conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
 conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemogočimo transakcije
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor) 
