@@ -83,7 +83,35 @@ def uvozi_podatke_univerze():
                 continue
     conn.commit()
 
+def ustvari_tabelo_podjetja():
+    cur.execute("""
+        CREATE TABLE podjetja (
+            id SERIAL PRIMARY KEY,
+            drzava TEXT NOT NULL,
+            ime TEXT NOT NULL,
+            kraj TEXT NOT NULL,
+            bancni_racun TEXT NOT NULL,
+            panoga TEXT NOT NULL
+        );
+    """)
+    conn.commit()
 
+def uvozi_podatke_podjetja():
+    with open("Podjetje.csv", encoding="utf8") as f:
+        rd = csv.reader(f, delimiter=",")
+        next(rd)# izpusti naslovno vrstico
+        for r in rd:
+            #r = [None if x in ('', '-') else x for x in r]
+            try:
+                cur.execute("""
+                INSERT INTO podjetja
+                (id, drzava, ime, kraj, bancni_racun, panoga)
+                VALUES (%s, %s, %s, %s, %s, %s)
+            """, r)
+                print(r)
+            except:
+                continue
+    conn.commit()
 
 conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor) 
