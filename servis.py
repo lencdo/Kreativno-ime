@@ -41,7 +41,42 @@ def static(filename):
 @get('/')
 def index():
     #cur.execute("SELECT * FROM oseba ORDER BY priimek, ime")
-    return template('index1.html', osebe=cur)
+    return template('index.html', osebe=cur)
+
+@get('/registracija')
+def registracija():
+    return template('registracija.html', osebe=cur)
+
+@post('registriraj_se)
+def registriraj_se():
+    """Registriraj novega uporabnika."""
+    uporabnisko_ime = bottle.request.forms.uporabnisko_ime
+    ime = bottle.request.forms.ime
+    password1 = bottle.request.forms.password1
+    password2 = bottle.request.forms.password2
+    # Ali uporabnik že obstaja?
+    c = baza.cursor()
+    c.execute("SELECT 1 FROM uporabnik WHERE username=?", [username])
+    if c.fetchone():
+        # Uporabnik že obstaja
+        return bottle.template("register.html",
+                               username=username,
+                               ime=ime,
+                               napaka='To uporabniško ime je že zavzeto')
+    elif not password1 == password2:
+        # Geslo se ne ujemata
+        return bottle.template("register.html",
+                               username=username,
+                               ime=ime,
+                               napaka='Gesli se ne ujemata')
+    else:
+        # Vse je v redu, vstavi novega uporabnika v bazo
+        password = password_md5(password1)
+        c.execute("INSERT INTO studenti(ime, priimek, kraj, uporabnisko_ime, password) VALUES (?, ?, ?)",
+                  (username, ime, password))
+        # Daj uporabniku cookie
+        bottle.response.set_cookie('username', username, path='/', secret=secret)
+        bottle.redirect("/")
 
 
 ######################################################################
@@ -53,4 +88,4 @@ conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT) # onemo
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor) 
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
-run(host='localhost', port=8080)
+run(host='localhost', port=8081)
