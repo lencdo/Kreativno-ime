@@ -47,7 +47,7 @@ def index():
 def registracija():
     return template('registracija.html', osebe=cur)
 
-@post('registriraj_se)
+@post('registriraj_se')
 def registriraj_se():
     """Registriraj novega uporabnika."""
     uporabnisko_ime = bottle.request.forms.uporabnisko_ime
