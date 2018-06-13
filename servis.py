@@ -46,36 +46,47 @@ def index():
 def registracija():
     return template('registracija.html', osebe=cur)
 
-@post('registriraj_se')
+@post('/registriraj_se/')
 def registriraj_se():
     """Registriraj novega uporabnika."""
-    uporabnisko_ime = bottle.request.forms.uporabnisko_ime
-    ime = bottle.request.forms.ime
-    geslo = bottle.request.forms.geslo
-    password2 = bottle.request.forms.password2
-    # Ali uporabnik že obstaja?
-    c = baza.cursor()
-    c.execute("SELECT 1 FROM uporabnik WHERE username=?", [username])
-    if c.fetchone():
-        # Uporabnik že obstaja
-        return bottle.template("register.html",
-                               username=username,
-                               ime=ime,
-                               napaka='To uporabniško ime je že zavzeto')
-    elif not password1 == password2:
-        # Geslo se ne ujemata
-        return bottle.template("register.html",
-                               username=username,
-                               ime=ime,
-                               napaka='Gesli se ne ujemata')
-    else:
-        # Vse je v redu, vstavi novega uporabnika v bazo
-        password = password_md5(password1)
-        c.execute("INSERT INTO studenti(ime, priimek, kraj, uporabnisko_ime, password) VALUES (?, ?, ?)",
-                  (username, ime, password))
-        # Daj uporabniku cookie
-        bottle.response.set_cookie('username', username, path='/', secret=secret)
-        bottle.redirect("/")
+    ime = request.forms.get('q15_name15[first]')
+    priimek = request.forms.get('q15_name15[last]')
+    spol = request.forms.get('q28_areYou')
+    kraj = request.forms.get('q33_address[city]')
+    drzava = request.forms.get('q33_address[country]')
+    postna_stevilka = request.forms.get('q33_address[postal]')
+    uporabnisko_ime = request.forms.get('')
+    geslo1 = request.forms.get('q30_email30')
+    geslo2 = request.forms.get('q30_email30')
+    #rojstni_datum = request.forms.get('')
+    
+    
+    print(ime, priimek, spol, kraj, drzava, postna_stevilka, uporabnisko_ime, geslo1, geslo2)
+    #return template('poskus', osebe=cur)
+##    password2 = bottle.request.forms.password2
+##    # Ali uporabnik že obstaja?
+##    c = baza.cursor()
+##    c.execute("SELECT 1 FROM uporabnik WHERE username=?", [username])
+##    if c.fetchone():
+##        # Uporabnik že obstaja
+##        return bottle.template("register.html",
+##                               username=username,
+##                               ime=ime,
+##                               napaka='To uporabniško ime je že zavzeto')
+##    elif not password1 == password2:
+##        # Geslo se ne ujemata
+##        return bottle.template("register.html",
+##                               username=username,
+##                               ime=ime,
+##                               napaka='Gesli se ne ujemata')
+##    else:
+##        # Vse je v redu, vstavi novega uporabnika v bazo
+##        password = password_md5(password1)
+##        c.execute("INSERT INTO studenti(ime, priimek, kraj, uporabnisko_ime, password) VALUES (?, ?, ?)",
+##                  (username, ime, password))
+##        # Daj uporabniku cookie
+##        bottle.response.set_cookie('username', username, path='/', secret=secret)
+##        bottle.redirect("/")
 
 
 ######################################################################
