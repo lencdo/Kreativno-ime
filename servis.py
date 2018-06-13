@@ -38,21 +38,20 @@ psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo prob
 def static(filename):
     return static_file(filename, root='assets')
 
-@get('/')
+@route('/')
 def index():
-    #cur.execute("SELECT * FROM oseba ORDER BY priimek, ime")
     return template('index.html', osebe=cur)
 
-@get('/registracija')
+@route('/registracija')
 def registracija():
     return template('registracija.html', osebe=cur)
 
-@post('registriraj_se)
+@post('registriraj_se')
 def registriraj_se():
     """Registriraj novega uporabnika."""
     uporabnisko_ime = bottle.request.forms.uporabnisko_ime
     ime = bottle.request.forms.ime
-    password1 = bottle.request.forms.password1
+    geslo = bottle.request.forms.geslo
     password2 = bottle.request.forms.password2
     # Ali uporabnik že obstaja?
     c = baza.cursor()

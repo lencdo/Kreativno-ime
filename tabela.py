@@ -9,15 +9,18 @@ import csv
 def ustvari_tabelo_studenti():
     cur.execute("""
         CREATE TABLE studenti (
-            id INTEGER PRIMARY KEY,
+            id SERIAL PRIMARY KEY,
             ime TEXT NOT NULL,
             priimek TEXT NOT NULL,
-            kraj TEXT NOT NULL,
             spol TEXT NOT NULL,
-            kreditna_kartica TEXT NOT NULL,
-            znanja TEXT,
             rojstni_dan TEXT NOT NULL,
-            izobrazba INTEGER
+            drzava TEXT NOT NULL,
+            kraj TEXT NOT NULL,
+            postna_stevilka INTEGER NOT NULL,
+            kreditna_kartica TEXT NOT NULL,
+            uporabnisko_ime TEXT NOT NULL,
+            geslo TEXT NOT NULL,
+            izobrazba INTEGER REFERENCES univerze(id)
         );
     """)
     conn.commit()
@@ -37,9 +40,9 @@ def uvozi_podatke_studenti():
             #r = [None if x in ('', '-') else x for x in r] nevem ali je potrebno
             cur.execute("""
                 INSERT INTO studenti
-                (id, ime, priimek, kraj, spol, kreditna_kartica,
-                 znanja, rojstni_dan, izobrazba)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+                (id, ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka,
+                kreditna_kartica, uporabnisko_ime, geslo, izobrazba)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, r)
             #cur.fetchone()
     conn.commit()
@@ -91,8 +94,16 @@ def ustvari_tabelo_podjetja():
             ime TEXT NOT NULL,
             kraj TEXT NOT NULL,
             bancni_racun TEXT NOT NULL,
-            panoga TEXT NOT NULL
+            panoga TEXT NOT NULL,
+            geslo TEXT NOT NULL,
+            uporabnisko_ime TEXT NOT NULL
         );
+    """)
+    conn.commit()
+
+def pobrisi_tabelo_podjetja():
+    cur.execute("""
+        DROP TABLE podjetja;
     """)
     conn.commit()
 
@@ -105,8 +116,8 @@ def uvozi_podatke_podjetja():
             try:
                 cur.execute("""
                 INSERT INTO podjetja
-                (id, drzava, ime, kraj, bancni_racun, panoga)
-                VALUES (%s, %s, %s, %s, %s, %s)
+                (id, drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             """, r)
                 print(r)
             except:
