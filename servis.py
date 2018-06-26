@@ -40,7 +40,7 @@ def static(filename):
 
 @route('/')
 def index():
-    return template('index.html', osebe=cur)
+    return template('prosta_dela.html', osebe=cur)
 
 @route('/registracija')
 def registracija():

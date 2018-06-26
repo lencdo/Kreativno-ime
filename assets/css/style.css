@@ -1,4 +1,4 @@
-﻿
+
 /*=============================================================
     Authour URI: www.binarytheme.com
     License: Commons Attribution 3.0
@@ -20,6 +20,8 @@
 body {
           font-family:'Open Sans', sans-serif;
     font-size:14px;
+    background-image: url(/assets/img/servis.jpg);
+    background-size: cover;
 }
 
 
@@ -88,6 +90,73 @@ color: #000;
 .btn {
     margin-bottom:5px;
 }
+
+/*=======================================
+  PROSTA DELA
+==================================================*/
+
+.prosta_dela nav {
+	border-width: 8px; 
+	border-style: solid; 
+	border-color: #0099ff;
+	line-height: 35px;
+	float: left;
+	height: 65px
+}
+
+.prosta_dela nav ul {
+	float:left;
+}
+
+.prosta_dela nav ul li {
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+.prosta_dela nav ul li a {
+	display: block;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 10px 45px;
+	font-family: arial;
+}
+
+.prosta_dela nav ul li ul {
+	display: none;
+	position: absolute;
+	background-color: #0099ff;
+	padding: 5px 5px;
+	border-radius: 0px 0px 4px 4px;
+}
+
+.prosta_dela nav ul li:hover ul {
+	display: block;
+}
+
+.prosta_dela nav ul li button {
+	padding: 2px 20px;
+	background-color: #007acc;
+	text-align: center;
+	font-size: 15px;
+	color: #ffffff;
+	border-radius: 8px;
+
+}
+
+.prosta_dela nav ul li ul li {
+	width: 180px;
+	border-radius: 4px;
+}
+
+
+.prosta_dela nav ul li ul li input {
+	padding: 3px 45px;
+	text-align: center;
+	font-size: 15px;
+}
+
+
 /*=======================================
   INDEX PAGE
 ==================================================*/
