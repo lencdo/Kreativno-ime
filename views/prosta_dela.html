@@ -16,6 +16,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,29 +45,30 @@
     </nav>
 
     <div class="prosta_dela">
+	<form method="post" action="/">
     	
 	<nav>
 	    <ul>
 		<li><a href="#">Vrsta oglasa</a>
 		    <ul>
-			<li><input type="checkbox">Kratkotrajno delo</input></li>
-			<li><input type="checkbox">Dolgotrajno delo</input></li>
-			<li><input type="checkbox">Počitniško delo</input></li>
+			<li><input type="checkbox" name="vrsta1" id="kratkotrajno" value="kratkotrajno">Kratkotrajno delo</input></li>
+			<li><input type="checkbox" name="vrsta2" id="dolgotrajno" value="dolgotrajno">Dolgotrajno delo</input></li>
+			<li><input type="checkbox" name="vrsta3" id="pocitnisko" value="pocitnisko">Počitniško delo</input></li>
 		    </ul>
 		</li>
 	    	<li><a href="#">Delovnik</a>
 		    <ul>
-			<li><input type="checkbox">Dopoldne</input></li>
-			<li><input type="checkbox">Popoldne</input></li>
-			<li><input type="checkbox">Izmensko</input></li>
-			<li><input type="checkbox">Med vikendom</input></li>
+			<li><input type="checkbox" name="delovnik1" id="dopoldne" value="dopoldne">Dopoldne</input></li>
+			<li><input type="checkbox" name="delovnik2" id="popoldne" value="popoldne">Popoldne</input></li>
+			<li><input type="checkbox" name="delovnik3" id="izmensko" value="izmensko">Izmensko</input></li>
+			<li><input type="checkbox" name="delovnik4" id="med vikendom" value="med vikendom">Med vikendom</input></li>
 		    </ul>
 		</li>
 
 	        <li><a href="#">Urna postavka</a>
 	    	
 		    <ul>
-			<li><input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			<li><input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="postavka">
 				<p>Minimalna postavka: <span id="demo"></span></p>
 				<script>
 				    var slider = document.getElementById("myRange");
@@ -83,10 +85,11 @@
 
 		    </ul>
 		</li>
-		<li><button type="button" href="#">Išči</button></li>
+		<li><button type="submit" href="#">Išči</button></li>
 	    </ul>
 
     	</nav>
+	</form>	
     </div>
 
 </body>
