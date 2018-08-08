@@ -63,8 +63,26 @@
 		    </ul>
 		</li>
 
-	        <li><a href="#">Urna postavka</a></li>
-	    
+	        <li><a href="#">Urna postavka</a>
+	    	
+		    <ul>
+			<li><input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+				<p>Minimalna postavka: <span id="demo"></span></p>
+				<script>
+				    var slider = document.getElementById("myRange");
+				    var output = document.getElementById("demo");
+				    output.innerHTML = slider.value;
+
+				    slider.oninput = function() {
+  					output.innerHTML = this.value;
+				    }
+				</script>
+
+
+			</li>
+
+		    </ul>
+		</li>
 		<li><button type="button" href="#">Išči</button></li>
 	    </ul>
 
