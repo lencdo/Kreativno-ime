@@ -55,8 +55,12 @@ def vrni_dela():
     res=c.fetchall()
     return(res)
 
-@route('/')
+@route("/")
 def index():
+    return template("index.html", osebe=cur)
+
+@route('/prosta_dela')
+def prosta_dela():
     return template('prosta_dela.html', osebe=cur)
 
 @post('/')
