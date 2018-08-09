@@ -100,16 +100,14 @@ color: #000;
 	border-style: solid; 
 	border-color: #0099ff;
 	line-height: 35px;
-	float: left;
 	height: 65px;
-}
-
-.prosta_dela nav ul {
 	float:left;
 }
 
-.prosta_dela nav ul li {
-	float: left;
+
+
+.prosta_dela nav ul li {  
+  float:left;
 	position: relative;
 	list-style: none;
 }
@@ -128,6 +126,7 @@ color: #000;
 	background-color: #0099ff;
 	padding: 5px 5px;
 	border-radius: 0px 0px 4px 4px;
+	float: left;
 }
 
 .prosta_dela nav ul li:hover ul {
@@ -161,22 +160,43 @@ color: #000;
  PROSTA DELA ŠKATLE
 ==================================================*/
 .delo nav {
-  border-width: 5px; 
+  float:left;
+  margin-top: 40px;
+  border-width: 2px; 
 	border-style: solid; 
-	border-color: #008ae6;
-	line-height: 30px;
-	float: left;
+	border-color: #007acc;
+  padding: 7px 30px 7px 30px;
+	clear: left;
 	height: 40px;
+	display: block;
+	background-color: #008ae6;
+	margin-left: 450px;
+	border-radius: 8px;
   
+}
+
+.delo nav p {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+
 }
 
 .delo nav ul {
   float:left;
+  background-image: url(/assets/img/ozadje1.jpg);
+  background-size: contain;
+  border-radius: 8px;
+  
+  
 }
 
-.delo nav ul li {
-  float:left;
-  
+.delo nav ul li p{
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: lowercase;
+  text-decoration: none;
 }
 
 /*=======================================
