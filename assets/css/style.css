@@ -22,6 +22,7 @@ body {
     font-size:14px;
     background-image: url(/assets/img/servis.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -197,6 +198,24 @@ color: #000;
   font-size: 15px;
   text-transform: lowercase;
   text-decoration: none;
+}
+
+
+/*=======================================
+GUMB
+==================================================*/
+
+.gumb button {
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 45%;
+  border: 2px solid #000000;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 20px 20px;
+  
 }
 
 /*=======================================
