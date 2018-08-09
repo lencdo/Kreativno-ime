@@ -65,20 +65,28 @@ def index():
     kratkotrajno = request.forms.get('vrsta1')
     dolgotrajno = request.forms.get('vrsta2')
     pocitnisko = request.forms.get('vrsta3')
-    L = list(filter(None, [kratkotrajno,dolgotrajno, pocitnisko]))
+    L = tuple(filter(None, [kratkotrajno, dolgotrajno, pocitnisko]))
     print(L)
+    dol=len(L)
+    if dol == 0:
+        L=('kratkotrajno', 'dolgotrajno', 'pocitnisko')
 
     delovnik1 = request.forms.get('delovnik1')
     delovnik2 = request.forms.get('delovnik2')
     delovnik3 = request.forms.get('delovnik3')
     delovnik4 = request.forms.get('delovnik4')
-    D = list(filter(None, [delovnik1, delovnik2, delovnik3, delovnik4]))
+    D = tuple(filter(None, [delovnik1, delovnik2, delovnik3, delovnik4]))
+    dol2=len(D)
+    if dol2 == 0:
+        D=('dopoldne', 'popoldne', 'izmensko', 'med vikendom')
     print(D)
 
     postavka = request.forms.get('postavka')
     print("radi", kratkotrajno, dolgotrajno, pocitnisko, delovnik1, delovnik2, delovnik3, delovnik4, postavka)
     c=conn.cursor()
-    #c.execute("SELECT * FROM prosta_dela WHERE blablabla)
+    c.execute("SELECT * FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
+    vrni=c.fetchall()
+    print(vrni)
 
 
 @post('/registriraj_se/')

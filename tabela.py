@@ -124,5 +124,25 @@ def uvozi_podatke_podjetja():
                 continue
     conn.commit()
 
+def ustvari_tabelo_prosta_dela():
+    cur.execute("""
+    CREATE TABLE prosta_dela (
+        id SERIAL PRIMARY KEY,
+        delovnik TEXT NOT NULL,
+        urna_postavka NUMERIC NOT NULL,
+        panoga TEXT NOT NULL,
+        kraj TEXT NOT NULL,
+        vrsta TEXT NOT NULL
+    );
+""")
+    conn.commit()
+
+def pobrisi_tabelo_prosta_dela():
+    cur.execute("""
+    DROP TABLE prosta_dela;
+""")
+    conn.commit()
+
+
 conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password)
 cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor) 
