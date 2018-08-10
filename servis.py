@@ -63,6 +63,14 @@ def index():
 def prosta_dela():
     return template('prosta_dela.html', osebe=cur)
 
+@route("/student")
+def student():
+    return template("student.html", osebe=cur)
+
+@route('/prosta_dela_student')
+def prosta_dela():
+    return template('prosta_dela_student.html', osebe=cur)
+
 @post('/')
 def index():
     ##"""Išči prosta dela."""
@@ -161,4 +169,4 @@ def static(filename):
     return static_file(filename, root='assets')
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
-run(host='localhost', port=8080)
+run(host='localhost', port=8081)

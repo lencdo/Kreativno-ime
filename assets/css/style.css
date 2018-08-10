@@ -20,9 +20,7 @@
 body {
           font-family:'Open Sans', sans-serif;
     font-size:14px;
-    background-image: url(/assets/img/servis.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+
 }
 
 
@@ -217,6 +215,16 @@ GUMB
   padding: 20px 20px;
   
 }
+
+
+/*=======================================
+ STUDENT PRIJAVA
+==================================================*/
+.st {
+  background-image:url(/assets/img/student.jpg) ;
+  
+}
+
 
 /*=======================================
   INDEX PAGE
