@@ -41,9 +41,13 @@ def static(filename):
 
 
 
-@route('/registracija')
+@route('/registracija_podjetje')
 def registracija():
-    return template('registracija.html', osebe=cur)
+    return template('registracija_podjetje.html', osebe=cur)
+
+@route('/registracija_student')
+def registracija():
+    return template('registracija_student.html', osebe=cur)
 
 @route('/prijava')
 def prijava():
@@ -63,7 +67,7 @@ def index():
 def prosta_dela():
     return template('prosta_dela.html', osebe=cur)
 
-@route("/student")
+@route('/student')
 def student():
     return template("student.html", osebe=cur)
 
@@ -104,6 +108,20 @@ def index():
     vrni=c.fetchall()
     print(vrni)
 
+@post('/registriraj_se_podjetje/')
+def registriraj_se_podjetje():
+    """Registriraj novega uporabnika."""
+    naziv = request.forms.get('naziv')
+    kraj = request.forms.get('kraj')
+    postna_stevilka = request.forms.get('stevilka')
+    drzava = request.forms.get('drzava')
+    panoga = request.forms.get('panoga')
+    kartica = request.forms.get('kartica')
+    uporabnisko = request.forms.get('uporabnisko')
+    geslo1 = request.forms.get('geslo1')
+    geslo2 = request.forms.get('geslo1')
+
+    print(naziv, kraj, postna_stevilka, drzava, panoga, kartica, uporabnisko, geslo1, geslo2)
 
 @post('/registriraj_se/')
 def registriraj_se():
@@ -118,7 +136,9 @@ def registriraj_se():
     geslo1 = request.forms.get('q30_email30')
     geslo2 = request.forms.get('q30_email30')
     rojstni_datum = request.forms.get('datuum')
-    kreditna_kartica="13212312321312"
+    kreditna_kartica=request.forms.get('kartica')
+    izobrazba=request.forms.get('faks')
+
     
     print(ime, priimek, spol, kraj, drzava, postna_stevilka, uporabnisko_ime, geslo1, geslo2, rojstni_datum)
     #return template('poskus', osebe=cur)

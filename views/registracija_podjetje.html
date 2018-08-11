@@ -230,7 +230,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
 </script>
 </head>
 <body>
-<form class="jotform-form" action="/registriraj_se/" method="post" name="form_81625621710349" id="81625621710349" accept-charset="utf-8" novalidate="true">
+<form class="jotform-form" action="/registriraj_se_podjetje/" method="post" name="form_81625621710349" id="81625621710349" accept-charset="utf-8" novalidate="true">
   <input name="formID" value="81625621710349" type="hidden">
   <div class="form-all">
     <ul class="form-section page-section">
@@ -238,7 +238,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> Naziv podjetja </label>
         <div id="cid_15" class="form-input-wide">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="last_15" name="q15_name15[last]" class="form-textbox" size="15" value="" data-component="last" type="text">
+              <input id="last_15" name="naziv" class="form-textbox" size="15" value="" data-component="last" type="text">
               <label class="form-sub-label" for="last_15" id="sublabel_last" style="min-height:13px"> Naziv podjetja </label>
             </span>
         </div>
@@ -267,7 +267,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
               <tr>
                 <td width="50%">
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <input id="input_33_city" name="q33_address[city]" class="form-textbox form-address-city" size="21" value="" data-component="city" type="text">
+                    <input id="input_33_city" name="kraj" class="form-textbox form-address-city" size="21" value="" data-component="city" type="text">
                     <label class="form-sub-label" for="input_33_city" id="sublabel_33_city" style="min-height:13px"> Kraj </label>
                   </span>
                 </td>
@@ -281,13 +281,13 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
               <tr>
                 <td width="50%">
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <input id="input_33_postal" name="q33_address[postal]" class="form-textbox form-address-postal" size="10" value="" data-component="zip" type="text">
+                    <input id="input_33_postal" name="stevilka" class="form-textbox form-address-postal" size="10" value="" data-component="zip" type="text">
                     <label class="form-sub-label" for="input_33_postal" id="sublabel_33_postal" style="min-height:13px"> Poštna številka </label>
                   </span>
                 </td>
                 <td>
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <select class="form-dropdown form-address-country" name="q33_address[country]" id="input_33_country" data-component="country">
+                    <select class="form-dropdown form-address-country" name="drzava" id="input_33_country" data-component="country">
                       <option value=""> Please Select </option>
                       <option value="United States"> United States </option>
                       <option value="Afghanistan"> Afghanistan </option>
@@ -548,7 +548,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> Panoga </label>
         <div id="cid_15" class="form-input-wide">
 		    <span class="form-sub-label-container" style="vertical-align:top">
-                    <select class="form-dropdown form-address-country" name="q33_address[country]" id="input_33_country" data-component="country">
+                    <select class="form-dropdown form-address-country" name="panoga" id="input_33_country" data-component="country">
                       <option value=""> Prosim, izberite panogo </option>
  					  <option value="Product Engineer"> Product Engineer </option>
  					  <option value="Registered Nurse"> Registered Nurse </option>
@@ -1557,7 +1557,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> IBAN </label>
         <div id="cid_15" class="form-input-wide">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="first_15" name="q15_name15[first]" class="form-textbox" size="10" value="" data-component="first" type="text">
+              <input id="first_15" name="kartica" class="form-textbox" size="10" value="" data-component="first" type="text">
               <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px"> IBAN </label>
             </span>
         </div>
@@ -1570,7 +1570,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
           </span>
         </label>
         <div id="cid_34" class="form-input-wide jf-required">
-          <input id="input_34" name="q34_email" class="form-textbox validate" size="30" value="" data-component="email" required="" type="email">
+          <input id="input_34" name="uporabnisko" class="form-textbox validate" size="30" value="" data-component="email" required="" type="email">
         </div>
       </li>
       <li class="form-line jf-required" data-type="password" id="id_30">
@@ -1582,10 +1582,10 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         </label>
         <div id="cid_30" class="form-input-wide jf-required">
           <div data-wrapper-react="true">
-            <input id="input_30" name="q30_email30" class="form-textbox validate[required, Password]" size="32" value="" placeholder="Vnesite geslo" data-component="password" required="" type="password">
+            <input id="input_30" name="geslo1" class="form-textbox validate[required, Password]" size="32" value="" placeholder="Vnesite geslo" data-component="password" required="" type="password">
             <br>
             <label class="form-sub-label" style="display:none" for="input_30_confirm"> Confirmation Email </label>
-            <input id="input_30_confirm" name="q30_email30" class="form-textbox validate[required, Password, Password_Confirm]" style="margin-top:8px" size="32" value="" placeholder="Potrdite geslo" data-component="passwordConfirmation" onpaste="return false;" type="password">
+            <input id="input_30_confirm" name="geslo2" class="form-textbox validate[required, Password, Password_Confirm]" style="margin-top:8px" size="32" value="" placeholder="Potrdite geslo" data-component="passwordConfirmation" onpaste="return false;" type="password">
           </div>
         </div>
       </li>
