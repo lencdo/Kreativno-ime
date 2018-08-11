@@ -43,7 +43,7 @@ def static(filename):
 
 @route('/registracija')
 def registracija():
-    return template('registracija_student.html', osebe=cur)
+    return template('registracija.html', osebe=cur)
 
 @route('/prijava')
 def prijava():
@@ -70,6 +70,10 @@ def student():
 @route('/prosta_dela_student')
 def prosta_dela():
     return template('prosta_dela_student.html', osebe=cur)
+
+@route("/podjetje")
+def prosta_dela():
+    return template('podjetje.html', osebe=cur)
 
 @post('/')
 def index():
@@ -169,4 +173,4 @@ def static(filename):
     return static_file(filename, root='assets')
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
-run(host='localhost', port=8081)
+run(host='localhost', port=8082)

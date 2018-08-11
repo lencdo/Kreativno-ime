@@ -244,6 +244,30 @@ GUMB
 
 
 /*=======================================
+  PODJETJE
+==================================================*/
+.podjetje nav {
+  background-image: url(/assets/img/podjetje2.jpg);
+  background-repeat: no-repeat;
+	background-size: cover;
+  margin-top: 100px;
+  margin-left: 500px;
+  display: block;
+  float:left;
+  padding: 30px 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000;
+}
+  
+.podjetje nav ul li {
+  color: #ffffff;
+  padding-top: 10px;
+  font-size: 25px;
+}
+
+
+/*=======================================
   INDEX PAGE
 ==================================================*/
 
