@@ -43,7 +43,7 @@ def static(filename):
 
 @route('/registracija')
 def registracija():
-    return template('registracija.html', osebe=cur)
+    return template('registracija_student.html', osebe=cur)
 
 @route('/prijava')
 def prijava():
