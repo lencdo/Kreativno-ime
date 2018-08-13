@@ -39,8 +39,6 @@ psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo prob
 def static(filename):
     return static_file(filename, root='assets')
 
-
-
 @route('/registracija_podjetje')
 def registracija():
     return template('registracija_podjetje.html', osebe=cur)
@@ -52,12 +50,6 @@ def registracija():
 @route('/prijava')
 def prijava():
     return template('prijava.html', osebe=cur)
-
-def vrni_dela():
-    c = conn.cursor()
-    c.execute("SELECT * FROM studenti WHERE kraj=%s", ["Kranj"])
-    res=c.fetchall()
-    return(res)
 
 @route("/")
 def index():
@@ -78,6 +70,7 @@ def prosta_dela():
 @route("/podjetje")
 def prosta_dela():
     return template('podjetje.html', osebe=cur)
+   
 
 @post('/')
 def index():
@@ -108,9 +101,9 @@ def index():
     vrni=c.fetchall()
     print(vrni)
 
-@post('/registriraj_se_podjetje/')
-def registriraj_se_podjetje():
-    """Registriraj novega uporabnika."""
+@post('/registracija_podjetje/')
+def registracija_podjetje():
+    #Registriraj novo podjetje
     naziv = request.forms.get('naziv')
     kraj = request.forms.get('kraj')
     postna_stevilka = request.forms.get('stevilka')
@@ -119,13 +112,26 @@ def registriraj_se_podjetje():
     kartica = request.forms.get('kartica')
     uporabnisko = request.forms.get('uporabnisko')
     geslo1 = request.forms.get('geslo1')
-    geslo2 = request.forms.get('geslo1')
+    geslo2 = request.forms.get('geslo2')
 
     print(naziv, kraj, postna_stevilka, drzava, panoga, kartica, uporabnisko, geslo1, geslo2)
 
-@post('/registriraj_se/')
+    cur.execute("SELECT 1 FROM podjetja WHERE uporabnisko_ime=%s", [uporabnisko])
+    if cur.fetchone():
+        # Uporabnik že obstaja
+        print('uporabnik ze obstaja')
+        return template("registracija_podjetje.html")
+    elif not geslo1 == geslo2:
+        return template("registracija_podjetje.html")
+    else:
+        # Vse je v redu, vstavi novega uporabnika v bazo
+        cur.execute("INSERT INTO podjetja (drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+              [drzava, naziv, kraj, kartica, panoga, geslo2, uporabnisko])
+        return template("index.html")
+
+@post('/registriracija_student/')
 def registriraj_se():
-    """Registriraj novega uporabnika."""
+    #Registriraj novega študenta
     ime = request.forms.get('q15_name15[first]')
     priimek = request.forms.get('q15_name15[last]')
     spol = request.forms.get('q28_areYou')
@@ -139,46 +145,25 @@ def registriraj_se():
     kreditna_kartica=request.forms.get('kartica')
     izobrazba=request.forms.get('faks')
 
-    
     print(ime, priimek, spol, kraj, drzava, postna_stevilka, uporabnisko_ime, geslo1, geslo2, rojstni_datum)
-    #return template('poskus', osebe=cur)
-    password2 = request.forms.password2
-    # Ali uporabnik že obstaja?
-    c = conn.cursor()
-##    c.execute("SELECT 1 FROM uporabnik WHERE username=?", [username])
-##    if c.fetchone():
-##        # Uporabnik že obstaja
-##        #return bottle.template("register.html",
-##        print('uporabnik ze obstaja')
-##    elif not password1 == password2:
-##        # Geslo se ne ujemata
-##        return bottle.template("register.html",
-##                            username=username,
-##                               ime=ime,
-##                               napaka='Gesli se ne ujemata')
- #   else:
+
+    cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
+    if cur.fetchone():
+        # Uporabnik že obstaja
+        print('uporabnik ze obstaja')
+        return template("registracija_podjetje.html")
+    elif not geslo1 == geslo2:
+        return template("registracija_podjetje.html")
+    else:
         # Vse je v redu, vstavi novega uporabnika v bazo
-  #  password = password_md5(password1)5
-    c.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
               (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1))
+        return template("index.html")
+ 
         # Daj uporabniku cookie
 ##        bottle.response.set_cookie('username', username, path='/', secret=secret)
 ##        bottle.redirect("/")
 
-##@post('/registriraj_se/')
-##def isci_sluzbe():
-##    """Poišči službe"""
-##    ime = request.forms.get('q15_name15[first]')
-##    priimek = request.forms.get('q15_name15[last]')
-##    spol = request.forms.get('q28_areYou')
-##    kraj = request.forms.get('q33_address[city]')
-##    drzava = request.forms.get('q33_address[country]')
-##    postna_stevilka = request.forms.get('q33_address[postal]')
-##    uporabnisko_ime = request.forms.get('q34_email')
-##    geslo1 = request.forms.get('q30_email30')
-##    geslo2 = request.forms.get('q30_email30')
-##    rojstni_datum = request.forms.get('datuum')
-##    kreditna_kartica="13212312321312"
 
 ######################################################################
 # Glavni program
