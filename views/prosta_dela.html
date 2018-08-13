@@ -94,22 +94,22 @@
     %for rezultat in rezultat_iskanja:
     <div class="delo">
 	<nav>
-	    <p>delo</p>
+	    <p>{{rezultat[0]}}</p>
 	    <ul>
 		<li>
-		    <p>Urna postavka: {{rezultat[0]}}€/h</p>
+		    <p>Urna postavka: {{rezultat[1]}}€/h</p>
 		</li>
 		<li>
-		    <p>Kraj:{{rezultat[1]}}</p>
+		    <p>Kraj:{{rezultat[2]}}</p>
 		</li>
 		<li>
-		    <p>Izobrazba:{{rezultat[2]}}</p>
+		    <p>Izobrazba:{{rezultat[3]}}</p>
 		</li>
 		<li>
-		    <p>Delovnik: {{rezultat[3]}}</p>
+		    <p>Delovnik: {{rezultat[4]}}</p>
 		</li>
 		<li>
-		    <p>Vrsta oglasa: {{rezultat[4]}}</p>
+		    <p>Vrsta oglasa: {{rezultat[5]}}</p>
 		</li>
 
 	    </ul>
@@ -119,7 +119,7 @@
     %end
 
 
-    %end
+
 
 
 

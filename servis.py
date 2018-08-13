@@ -179,4 +179,4 @@ def static(filename):
     return static_file(filename, root='assets')
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
-run(host='localhost', port=8082)
+run(host='localhost', port=8080)
