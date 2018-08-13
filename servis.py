@@ -57,7 +57,7 @@ def index():
 
 @route('/prosta_dela')
 def prosta_dela():
-    return template('prosta_dela.html', osebe=cur)
+    return template('prosta_dela.html', rezultat_iskanja={})
 
 @route('/student')
 def student():
@@ -100,6 +100,7 @@ def index():
     c.execute("SELECT * FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
     vrni=c.fetchall()
     print(vrni)
+    return template('prosta_dela.html', rezultat_iskanja=vrni)
 
 @post('/registracija_podjetje/')
 def registracija_podjetje():
