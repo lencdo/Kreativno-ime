@@ -91,27 +91,51 @@
 	</form>	
     </div>
 
-
+    %for rezultat in rezultat_iskanja:
     <div class="delo">
 	<nav>
 	    <p>delo</p>
 	    <ul>
 		<li>
-		    <p>Urna postavka: 5€/h</p>
+		    <p>Urna postavka: {{rezultat[0]}}€/h</p>
 		</li>
 		<li>
-		    <p>Delovnik: Izmensko</p>
+		    <p>Kraj:{{rezultat[1]}}</p>
 		</li>
 		<li>
-		    <p>Vrsta oglasa: Kratkotrajno delo</p>
+		    <p>Izobrazba:{{rezultat[2]}}</p>
 		</li>
 		<li>
-		    <p>Šifra:000000</p>
+		    <p>Delovnik: {{rezultat[3]}}</p>
 		</li>
+		<li>
+		    <p>Vrsta oglasa: {{rezultat[4]}}</p>
+		</li>
+
 	    </ul>
 	</nav>
 
     </div>
+    %end
+    %if prazen == '':
+
+
+    <p><strong>NI PROSTIH DEL ZA ŽELJEN SEZNAM ISKANJA!</strong></p>
+
+    %end
+
+
+
+
+
+
+
 
 </body>
 </html>
+
+
+
+
+
+
