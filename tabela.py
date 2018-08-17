@@ -128,11 +128,15 @@ def ustvari_tabelo_prosta_dela():
     cur.execute("""
     CREATE TABLE prosta_dela (
         id SERIAL PRIMARY KEY,
-        delovnik TEXT NOT NULL,
-        urna_postavka NUMERIC NOT NULL,
         panoga TEXT NOT NULL,
+        urna_postavka NUMERIC NOT NULL,
         kraj TEXT NOT NULL,
-        vrsta TEXT NOT NULL
+        izobrazba TEXT NOT NULL,
+        delovnik TEXT NOT NULL,
+        vrsta TEXT NOT NULL,
+        kontakt TEXT NOT NULL,
+        posta INTEGER NOT NULL,
+        drzava TEXT NOT NULL
     );
 """)
     conn.commit()

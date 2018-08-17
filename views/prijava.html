@@ -72,7 +72,6 @@
         padding:0;
         background:#fff;
     }
-
     .form-all{
         margin:0px auto;
         padding-top:20px;
@@ -84,7 +83,6 @@
     .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
         color: false;
     }
-
 </style>
 
 <style type="text/css" id="form-designer-style">
@@ -217,7 +215,6 @@
 <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.6489" type="text/javascript"></script>
 <script type="text/javascript">
    JotForm.init(function(){
-
  JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
  JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
  JotForm.calendarOther = {"today":"Today"};
@@ -233,14 +230,13 @@
        }, 20);
     /*INIT-END*/
 });
-
    JotForm.prepareCalculationsOnTheFly([null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"name15","qid":"15","text":"Ime in priimek","type":"control_fullname"},null,null,null,null,null,null,null,null,null,null,{"name":"submitForm","qid":"26","text":"Potrdi","type":"control_button"},null,{"name":"areYou","qid":"28","text":"Spol","type":"control_radio"},null,{"name":"email30","qid":"30","subLabel":"","text":"Geslo","type":"control_email"},null,{"description":"","name":"date","qid":"32","text":"Datum rojstva","type":"control_datetime"},{"description":"","name":"address","qid":"33","text":"Kraj in drzava","type":"control_address"},{"description":"","name":"email","qid":"34","subLabel":"","text":"Uporabnisko ime","type":"control_email"}]);
    setTimeout(function() {
 JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"name15","qid":"15","text":"Ime in priimek","type":"control_fullname"},null,null,null,null,null,null,null,null,null,null,{"name":"submitForm","qid":"26","text":"Potrdi","type":"control_button"},null,{"name":"areYou","qid":"28","text":"Spol","type":"control_radio"},null,{"name":"email30","qid":"30","subLabel":"","text":"Geslo","type":"control_email"},null,{"description":"","name":"date","qid":"32","text":"Datum rojstva","type":"control_datetime"},{"description":"","name":"address","qid":"33","text":"Kraj in drzava","type":"control_address"},{"description":"","name":"email","qid":"34","subLabel":"","text":"Uporabnisko ime","type":"control_email"}]);}, 20); 
 </script>
 </head>
 <body>
-<form class="jotform-form" action="https://submit.jotformeu.com/submit/81625621710349/" method="post" name="form_81625621710349" id="81625621710349" accept-charset="utf-8" novalidate="true">
+<form class="jotform-form" action="/prijava/" method="post" name="form_81625621710349" id="81625621710349" accept-charset="utf-8" novalidate="true">
   <input name="formID" value="81625621710349" type="hidden">
   <div class="form-all">
     <ul class="form-section page-section">
@@ -251,13 +247,13 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input class="form-radio" id="input_28_0" name="q28_areYou" value="Male" type="radio">
+              <input class="form-radio" id="input_28_0" name="izbira" value="podjetje" type="radio">
               <label id="label_input_28_0" for="input_28_0"> Podjetje </label>
             </span>
             <span class="form-radio-item">
               <span class="dragger-item">
               </span>
-              <input class="form-radio" id="input_28_1" name="q28_areYou" value="Female" type="radio">
+              <input class="form-radio" id="input_28_1" name="izbira" value="student" type="radio">
               <label id="label_input_28_1" for="input_28_1"> Študent </label>
             </span>
           </div>
@@ -268,7 +264,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
           Uporabniško ime
         </label>
         <div id="cid_34" class="form-input-wide jf-required">
-          <input id="input_34" name="q34_email" class="form-textbox validate" size="30" value="" data-component="email" required="" type="email">
+          <input id="input_34" name="uime" class="form-textbox validate" size="30" value="" data-component="email" required="" type="email">
         </div>
       </li>
       <li class="form-line jf-required" data-type="password" id="id_30">
@@ -277,7 +273,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         </label>
         <div id="cid_30" class="form-input-wide jf-required">
           <div data-wrapper-react="true">
-            <input id="input_30" name="q30_email30" class="form-textbox validate[required, Password]" size="32" value="" placeholder="Vnesite geslo" data-component="password" required="" type="password">
+            <input id="input_30" name="ugeslo" class="form-textbox validate[required, Password]" size="32" value="" placeholder="Vnesite geslo" data-component="password" required="" type="password">
             <br>
             
           </div>

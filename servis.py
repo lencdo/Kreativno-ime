@@ -55,6 +55,10 @@ def prijava():
 def index():
     return template("index.html", osebe=cur)
 
+@route('/dodaj')
+def dodaj():
+    return template("dodajanje_dela.html", osebe=cur)
+
 @route('/prosta_dela')
 def prosta_dela():
     return template('prosta_dela.html', rezultat_iskanja={})
@@ -67,10 +71,35 @@ def student():
 def prosta_dela():
     return template('prosta_dela_student.html', osebe=cur)
 
-@route("/podjetje")
+@route('/podjetje')
 def prosta_dela():
     return template('podjetje.html', osebe=cur)
-   
+
+@post('/prijava/')
+def prijava():
+    izbira = request.forms.get('izbira')
+    print(izbira)
+    ime = request.forms.get('uime')
+    ugeslo = request.forms.get('ugeslo')
+    if izbira == "student":
+        cur.execute("SELECT geslo FROM studenti WHERE uporabnisko_ime = %s", [ime])
+        aa = cur.fetchone()
+        if aa == None:
+            print('none, cudna prijava')
+        elif aa[0] == ugeslo:
+            print('uspesna prijava student')
+        else:
+            print('gesli se ne ujemata')
+    else:
+        cur.execute("SELECT geslo FROM podjetja WHERE uporabnisko_ime = %s", [ime])
+        bb = cur.fetchone()
+        if bb = None:
+            print('none, cudna prijava')
+        elif bb[0] == ugeslo:
+            print('uspesna prijava za podjetje')
+        else:
+            print('gesli se ne ujemata')
+                              
 
 @post('/')
 def index():
@@ -96,9 +125,8 @@ def index():
 
     postavka = request.forms.get('postavka')
     print("radi", kratkotrajno, dolgotrajno, pocitnisko, delovnik1, delovnik2, delovnik3, delovnik4, postavka)
-    c=conn.cursor()
-    c.execute("SELECT * FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
-    vrni=c.fetchall()
+    cur.execute("SELECT * FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
+    vrni=cur.fetchall()
     print(vrni)
     return template('prosta_dela.html', rezultat_iskanja=vrni)
 
@@ -130,8 +158,26 @@ def registracija_podjetje():
               [drzava, naziv, kraj, kartica, panoga, geslo2, uporabnisko])
         return template("index.html")
 
-@post('/registriracija_student/')
-def registriraj_se():
+@post('/dodaj/')
+def dodaj():
+    #Registriraj novo podjetje
+    delovnik = request.forms.get('delovnik')
+    postavka = request.forms.get('urna')
+    panoga = request.forms.get('panoga1')
+    kraj = request.forms.get('kraj1')
+    posta = request.forms.get('posta1')
+    drzava = request.forms.get('drzava1')
+    vrsta = request.forms.get('vrsta1')
+    izobrazba = request.forms.get('zeljeno')
+    kontakt = request.forms.get('kontakt')
+    print(delovnik, postavka, panoga, kraj, posta, drzava, vrsta, izobrazba, kontakt)
+    vrstnired=(panoga, postavka, kraj, izobrazba, delovnik, vrsta, kontakt)
+
+    cur.execute("INSERT INTO prosta_dela (panoga, urna_postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                [panoga, postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava])
+
+@post('/registracija_student/')
+def registracija_student():
     #Registriraj novega študenta
     ime = request.forms.get('q15_name15[first]')
     priimek = request.forms.get('q15_name15[last]')
@@ -147,7 +193,6 @@ def registriraj_se():
     izobrazba=request.forms.get('faks')
 
     print(ime, priimek, spol, kraj, drzava, postna_stevilka, uporabnisko_ime, geslo1, geslo2, rojstni_datum)
-
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
     if cur.fetchone():
         # Uporabnik že obstaja
