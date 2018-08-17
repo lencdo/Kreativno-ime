@@ -53,7 +53,7 @@ def prijava():
 
 @route("/")
 def index():
-    return template("index.html", osebe=cur)
+    return template("index.html", osebe=cur, napaka=False)
 
 @route('/dodaj')
 def dodaj():
@@ -70,6 +70,10 @@ def student():
 @route('/prosta_dela_student')
 def prosta_dela():
     return template('prosta_dela_student.html', osebe=cur)
+
+@route('/registracija')
+def prosta_dela():
+    return template('registracija.html', osebe=cur)
 
 @route('/podjetje')
 def prosta_dela():

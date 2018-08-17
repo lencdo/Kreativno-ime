@@ -34,7 +34,6 @@
                 <ul class="nav navbar-nav navbar-right">
 		    <li><a href="prosta_dela">Prosta dela</a></li>
 		    <li><a href="prijava">Prijava</a></li>
-                    <li><a href="registracija">Registracija</a></li>
                 </ul>
             </div>
         </div>
@@ -42,9 +41,12 @@
 </head>
 <body>
     
-    %if defined('napaka') and napaka != False:
-	<p style="color:red;">{{napaka}}<p>
-    %end
+    <div class="gumb">
+	<button type="button" href="registracija_student">Študent</button>
+    </div>
+    <div class="gumb">
+	<button type="button" href="registracija_podjetje">Podjetje</button>
+    </div>
 
 
 </body>
