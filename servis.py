@@ -41,43 +41,46 @@ def static(filename):
 
 @route('/registracija_podjetje')
 def registracija():
-    return template('registracija_podjetje.html', osebe=cur)
+    return template('registracija_podjetje.html')
 
 @route('/registracija_student')
 def registracija():
-    return template('registracija_student.html', osebe=cur)
+    return template('registracija_student.html')
 
 @route('/prijava')
 def prijava():
-    return template('prijava.html', osebe=cur)
+    return template('prijava.html')
 
 @route("/")
 def index():
-    return template("index.html", osebe=cur, napaka=False)
+    return template("index.html", napaka=False)
 
 @route('/dodaj')
 def dodaj():
-    return template("dodajanje_dela.html", osebe=cur)
+    return template("dodajanje_dela.html")
 
 @route('/prosta_dela')
 def prosta_dela():
-    return template('prosta_dela.html', rezultat_iskanja={})
+    cur.execute("SELECT MAX(urna_postavka) FROM prosta_dela")
+    maks = cur.fetchone()
+    print(maks)
+    return template('prosta_dela.html', rezultat_iskanja={}, postavka=maks[0])
 
 @route('/student')
 def student():
-    return template("student.html", osebe=cur)
+    return template("student.html")
 
 @route('/prosta_dela_student')
 def prosta_dela():
-    return template('prosta_dela_student.html', osebe=cur)
+    return template('prosta_dela_student.html')
 
 @route('/registracija')
 def prosta_dela():
-    return template('registracija.html', osebe=cur)
+    return template('registracija.html')
 
 @route('/podjetje')
 def prosta_dela():
-    return template('podjetje.html', osebe=cur)
+    return template('podjetje.html')
 
 @post('/prijava/')
 def prijava():
@@ -89,20 +92,20 @@ def prijava():
         cur.execute("SELECT geslo FROM studenti WHERE uporabnisko_ime = %s", [ime])
         aa = cur.fetchone()
         if aa == None:
-            print('none, cudna prijava')
+            return template('index', napaka="Uporabnisko ime ne obstaja")
         elif aa[0] == ugeslo:
-            print('uspesna prijava student')
+            return template('student')
         else:
-            print('gesli se ne ujemata')
+            return template('index', napaka="Nepravilno geslo")
     else:
         cur.execute("SELECT geslo FROM podjetja WHERE uporabnisko_ime = %s", [ime])
         bb = cur.fetchone()
         if bb == None:
-            print('none, cudna prijava')
+            return template('index', napaka="Uporabnisko ime ne obstaja")
         elif bb[0] == ugeslo:
-            print('uspesna prijava za podjetje')
+            return template('podjetje')
         else:
-            print('gesli se ne ujemata')
+            return template('index', napaka="Nepravilno geslo")
                               
 
 @post('/')

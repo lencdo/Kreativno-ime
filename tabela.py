@@ -96,7 +96,8 @@ def ustvari_tabelo_podjetja():
             bancni_racun TEXT NOT NULL,
             panoga TEXT NOT NULL,
             geslo TEXT NOT NULL,
-            uporabnisko_ime TEXT NOT NULL
+            uporabnisko_ime TEXT NOT NULL,
+            kontakt TEXT NOT NULL
         );
     """)
     conn.commit()
@@ -112,12 +113,13 @@ def uvozi_podatke_podjetja():
         rd = csv.reader(f, delimiter=",")
         next(rd)# izpusti naslovno vrstico
         for r in rd:
+            print(r)
             #r = [None if x in ('', '-') else x for x in r]
             try:
                 cur.execute("""
                 INSERT INTO podjetja
-                (id, drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                (id, drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime, kontakt)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, r)
                 print(r)
             except:
