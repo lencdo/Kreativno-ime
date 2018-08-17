@@ -93,7 +93,7 @@ def prijava():
     else:
         cur.execute("SELECT geslo FROM podjetja WHERE uporabnisko_ime = %s", [ime])
         bb = cur.fetchone()
-        if bb = None:
+        if bb == None:
             print('none, cudna prijava')
         elif bb[0] == ugeslo:
             print('uspesna prijava za podjetje')
