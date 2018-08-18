@@ -85,7 +85,6 @@ def prosta_dela():
 @post('/prijava/')
 def prijava():
     izbira = request.forms.get('izbira')
-    print(izbira)
     ime = request.forms.get('uime')
     ugeslo = request.forms.get('ugeslo')
     if izbira == "student":
@@ -100,7 +99,6 @@ def prijava():
     else:
         cur.execute("SELECT geslo FROM podjetja WHERE uporabnisko_ime = %s", [ime])
         bb = cur.fetchone()
-        print(bb)
         if bb == None:
             return template('index', napaka="Uporabnisko ime ne obstaja")
         elif bb[0]==ugeslo:
@@ -119,7 +117,6 @@ def index():
     dolgotrajno = request.forms.get('vrsta2')
     pocitnisko = request.forms.get('vrsta3')
     L = tuple(filter(None, [kratkotrajno, dolgotrajno, pocitnisko]))
-    print(L)
     dol=len(L)
     if dol == 0:
         L=('kratkotrajno', 'dolgotrajno', 'pocitnisko')
@@ -132,13 +129,9 @@ def index():
     dol2=len(D)
     if dol2 == 0:
         D=('dopoldne', 'popoldne', 'izmensko', 'med vikendom')
-    print(D)
-
     postavka = request.forms.get('postavka')
-    print("radi", kratkotrajno, dolgotrajno, pocitnisko, delovnik1, delovnik2, delovnik3, delovnik4, postavka)
-    cur.execute("SELECT urna_postavka, kraj, izobrazba, delovnik, vrsta, kontakt FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
+    cur.execute("SELECT podjetja.ime, urna_postavka, prosta_dela.kraj, izobrazba, delovnik, vrsta, podjetja.kontakt FROM prosta_dela INNER JOIN podjetja ON prosta_dela.podjetje=podjetja.id WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
     vrni=cur.fetchall()
-    print(vrni)
     return template('prosta_dela.html', rezultat_iskanja=vrni)
 
 @post('/registracija_podjetje/')
@@ -154,15 +147,12 @@ def registracija_podjetje():
     geslo1 = request.forms.get('geslo1')
     geslo2 = request.forms.get('geslo2')
 
-    print(naziv, kraj, postna_stevilka, drzava, panoga, kartica, uporabnisko, geslo1, geslo2)
-
     cur.execute("SELECT 1 FROM podjetja WHERE uporabnisko_ime=%s", [uporabnisko])
     if cur.fetchone():
         # Uporabnik že obstaja
-        print('uporabnik ze obstaja')
-        return template("registracija_podjetje.html")
+        return template('index', napaka="Uporabnisko ime ze obstaja")
     elif not geslo1 == geslo2:
-        return template("registracija_podjetje.html")
+        return template('index', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO podjetja (drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime) VALUES (%s, %s, %s, %s, %s, %s, %s)",
@@ -180,19 +170,16 @@ def dodaj():
     drzava = request.forms.get('drzava1')
     vrsta = request.forms.get('vrsta1')
     izobrazba = request.forms.get('zeljeno')
-    print(delovnik, postavka, panoga, kraj, posta, drzava, vrsta, izobrazba)
-
     kuki = request.get_cookie('id', secret='skrivnost')
-    print(kuki)
     #iz cookieja preberemo še kontakt in ime podjetja
     stevilo=kuki[0]
     cur.execute("SELECT id, kontakt FROM podjetja WHERE id = %s", [stevilo])
     podatka = cur.fetchone()
-    print(podatka)
     ime_podj=podatka[0]
     kontakt=podatka[1]
     cur.execute("INSERT INTO prosta_dela (panoga, urna_postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava, podjetje) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
                 [panoga, postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava, ime_podj])
+    return template('index', napaka="Vaše delo je bilo dodano med prosta dela")
 
 @post('/registracija_student/')
 def registracija_student():
@@ -214,10 +201,10 @@ def registracija_student():
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
     if cur.fetchone():
         # Uporabnik že obstaja
-        print('uporabnik ze obstaja')
+        return template('index', napaka="Uporabnisko ime ze obstaja")
         return template("registracija_podjetje.html")
     elif not geslo1 == geslo2:
-        return template("registracija_podjetje.html")
+        return template('index', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
