@@ -100,13 +100,17 @@ def prijava():
     else:
         cur.execute("SELECT geslo FROM podjetja WHERE uporabnisko_ime = %s", [ime])
         bb = cur.fetchone()
+        print(bb)
         if bb == None:
             return template('index', napaka="Uporabnisko ime ne obstaja")
-        elif bb[0] == ugeslo:
+        elif bb[0]==ugeslo:
+            cur.execute("SELECT id FROM podjetja WHERE uporabnisko_ime = %s", [ime])
+            aj_di=cur.fetchone()
+            response.set_cookie('id', aj_di, path="/", secret='skrivnost')
             return template('podjetje')
         else:
             return template('index', napaka="Nepravilno geslo")
-                              
+                                  
 
 @post('/')
 def index():
@@ -132,7 +136,7 @@ def index():
 
     postavka = request.forms.get('postavka')
     print("radi", kratkotrajno, dolgotrajno, pocitnisko, delovnik1, delovnik2, delovnik3, delovnik4, postavka)
-    cur.execute("SELECT * FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
+    cur.execute("SELECT urna_postavka, kraj, izobrazba, delovnik, vrsta, kontakt FROM prosta_dela WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
     vrni=cur.fetchall()
     print(vrni)
     return template('prosta_dela.html', rezultat_iskanja=vrni)
@@ -176,12 +180,19 @@ def dodaj():
     drzava = request.forms.get('drzava1')
     vrsta = request.forms.get('vrsta1')
     izobrazba = request.forms.get('zeljeno')
-    kontakt = request.forms.get('kontakt')
-    print(delovnik, postavka, panoga, kraj, posta, drzava, vrsta, izobrazba, kontakt)
-    vrstnired=(panoga, postavka, kraj, izobrazba, delovnik, vrsta, kontakt)
+    print(delovnik, postavka, panoga, kraj, posta, drzava, vrsta, izobrazba)
 
-    cur.execute("INSERT INTO prosta_dela (panoga, urna_postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
-                [panoga, postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava])
+    kuki = request.get_cookie('id', secret='skrivnost')
+    print(kuki)
+    #iz cookieja preberemo še kontakt in ime podjetja
+    stevilo=kuki[0]
+    cur.execute("SELECT id, kontakt FROM podjetja WHERE id = %s", [stevilo])
+    podatka = cur.fetchone()
+    print(podatka)
+    ime_podj=podatka[0]
+    kontakt=podatka[1]
+    cur.execute("INSERT INTO prosta_dela (panoga, urna_postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava, podjetje) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                [panoga, postavka, kraj, izobrazba, delovnik, vrsta, kontakt, posta, drzava, ime_podj])
 
 @post('/registracija_student/')
 def registracija_student():

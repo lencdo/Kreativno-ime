@@ -95,9 +95,9 @@ def ustvari_tabelo_podjetja():
             kraj TEXT NOT NULL,
             bancni_racun TEXT NOT NULL,
             panoga TEXT NOT NULL,
-            geslo TEXT NOT NULL,
+            kontakt TEXT NOT NULL,
             uporabnisko_ime TEXT NOT NULL,
-            kontakt TEXT NOT NULL
+            geslo TEXT NOT NULL     
         );
     """)
     conn.commit()
@@ -118,7 +118,7 @@ def uvozi_podatke_podjetja():
             try:
                 cur.execute("""
                 INSERT INTO podjetja
-                (id, drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime, kontakt)
+                (id, drzava, ime, kraj, bancni_racun, panoga, kontakt, uporabnisko_ime, geslo)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             """, r)
                 print(r)
@@ -138,7 +138,8 @@ def ustvari_tabelo_prosta_dela():
         vrsta TEXT NOT NULL,
         kontakt TEXT NOT NULL,
         posta INTEGER NOT NULL,
-        drzava TEXT NOT NULL
+        drzava TEXT NOT NULL,
+        podjetje INTEGER REFERENCES podjetja(id)
     );
 """)
     conn.commit()
