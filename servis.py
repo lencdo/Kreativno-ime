@@ -7,7 +7,7 @@
 from bottle import *
 
 # uvozimo ustrezne podatke za povezavo
-import auth
+import auth_public as auth
 
 # uvozimo psycopg2
 import psycopg2, psycopg2.extensions, psycopg2.extras
@@ -216,8 +216,8 @@ def registracija_student():
         return template('index.html', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
-        cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, naziv[0]))
+        cur.execute(cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1)))
         return template("index.html", napaka=False)
  
         # Daj uporabniku cookie

@@ -239,11 +239,11 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <div id="cid_15" class="form-input-wide">
           <div data-wrapper-react="true">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="first_15" name="q15_name15[first]" class="form-textbox" size="10" value="" data-component="first" type="text">
+              <input id="first_15" name="q15_name15[first]" class="form-textbox" size="10" value="" data-component="first" type="text" required>
               <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px"> Ime </label>
             </span>
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="last_15" name="q15_name15[last]" class="form-textbox" size="15" value="" data-component="last" type="text">
+              <input id="last_15" name="q15_name15[last]" class="form-textbox" size="15" value="" data-component="last" type="text" required>
               <label class="form-sub-label" for="last_15" id="sublabel_last" style="min-height:13px"> Priimek </label>
             </span>
           </div>
@@ -274,7 +274,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
           <div data-wrapper-react="true">
             <div style="display:none">
               <span class="form-sub-label-container" style="vertical-align:top">
-                <input class="form-textbox validate[limitDate]" id="day_32" name="q32_date[day]" size="2" data-maxlength="2" value="" type="tel">
+                <input class="form-textbox validate[limitDate]" id="day_32" name="q32_date[day]" size="2" data-maxlength="2" value="" type="tel" required>
                 <span class="date-separate">
                   &nbsp;-
                 </span>
@@ -327,7 +327,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
               <tr>
                 <td width="50%">
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <input id="input_33_city" name="q33_address[city]" class="form-textbox form-address-city" size="21" value="" data-component="city" type="text">
+                    <input id="input_33_city" name="q33_address[city]" class="form-textbox form-address-city" size="21" value="" data-component="city" type="text" required>
                     <label class="form-sub-label" for="input_33_city" id="sublabel_33_city" style="min-height:13px"> Kraj </label>
                   </span>
                 </td>
@@ -341,13 +341,13 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
               <tr>
                 <td width="50%">
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <input id="input_33_postal" name="q33_address[postal]" class="form-textbox form-address-postal" size="10" value="" data-component="zip" type="text">
+                    <input id="input_33_postal" name="q33_address[postal]" class="form-textbox form-address-postal" size="10" value="" data-component="zip" type="number">
                     <label class="form-sub-label" for="input_33_postal" id="sublabel_33_postal" style="min-height:13px"> Poštna številka </label>
                   </span>
                 </td>
                 <td>
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <select class="form-dropdown form-address-country" name="q33_address[country]" id="input_33_country" data-component="country">
+                    <select class="form-dropdown form-address-country" name="q33_address[country]" id="input_33_country" data-component="country" required>
                       <option value=""> Please Select </option>
                       <option value="United States"> United States </option>
                       <option value="Afghanistan"> Afghanistan </option>
@@ -609,8 +609,8 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <div id="cid_15" class="form-input-wide">
 		    <span class="form-sub-label-container" style="vertical-align:top">
 
-
-<select class="form-dropdown form-address-country" name="faks" id="input_33_country" data-component="country">
+ 
+			<select class="form-dropdown form-address-country" name="faks" id="input_33_country" data-component="country" style="float:left;" required>
                       <option value=""> Prosim, izberite fakulteto </option>
 				%for element in sez:
                                     <option value="{{element}}"> {{element}} </option>
@@ -625,7 +625,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> IBAN </label>
         <div id="cid_15" class="form-input-wide">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="first_15" name="kartica" class="form-textbox" size="10" value="" data-component="first" type="text">
+              <input id="first_15" name="kartica" class="form-textbox" size="10" value="" data-component="first" type="text" required>
               <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px"> IBAN </label>
             </span>
         </div>
