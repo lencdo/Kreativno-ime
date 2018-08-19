@@ -45,7 +45,9 @@ def registracija():
 
 @route('/registracija_student')
 def registracija():
-    return template('registracija_student.html')
+    cur.execute("SELECT * FROM univerze")
+    seznam=cur.fetchall()
+    return template('registracija_student.html', sez=seznam)
 
 @route('/prijava')
 def prijava():
@@ -203,9 +205,7 @@ def registracija_student():
     geslo2 = request.forms.get('q30_email30')
     rojstni_datum = request.forms.get('datuum')
     kreditna_kartica=request.forms.get('kartica')
-    izobrazba=request.forms.get('faks')
-    cur.execute("SELECT 1 FROM univerze WHERE naziv=%s", [izobrazba])
-    naziv=cur.fetchone()
+    izobrazba=request.forms.faks
 
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
     if cur.fetchone():
@@ -217,7 +217,7 @@ def registracija_student():
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, naziv))
+              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, naziv[0]))
         return template("index.html", napaka=False)
  
         # Daj uporabniku cookie
