@@ -195,7 +195,7 @@ def registracija_podjetje():
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO podjetja (drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime, kontakt) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
               [drzava, naziv, kraj, kartica, panoga, geslo2, uporabnisko, kontakt])
-        return template("index.html", napaka=False)
+        redirect('/')
 
 @post('/dodaj/')
 def dodaj():
@@ -222,8 +222,8 @@ def dodaj():
 @post('/registracija_student/')
 def registracija_student():
     #Registriraj novega študenta
-    ime = request.forms.get('q15_name15[first]')
-    priimek = request.forms.get('q15_name15[last]')
+    ime = request.forms.q15_name15[first]
+    priimek = request.forms.q15_name15[last]
     spol = request.forms.get('q28_areYou')
     kraj = request.forms.get('q33_address[city]')
     drzava = request.forms.get('q33_address[country]')
@@ -234,10 +234,7 @@ def registracija_student():
     rojstni_datum = request.forms.get('datuum')
     kreditna_kartica=request.forms.get('kartica')
     izobrazba=request.forms.faks
-    print(izobrazba)
-    ustav=izobrazba[0]
-    print(ustav)
-    
+
 
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
     if cur.fetchone():
@@ -249,8 +246,8 @@ def registracija_student():
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, ustav))
-        return template("index.html", napaka=False)
+              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, izobrazba))
+        redirect('/')
  
         # Daj uporabniku cookie
 ##        bottle.response.set_cookie('username', username, path='/', secret=secret)
