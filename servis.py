@@ -61,8 +61,10 @@ def dodaj():
 
 @route('/prosta_dela')
 def prosta_dela():
-    postavka = [cur.execute("SELECT MIN(urna_postavka) FROM prosta_dela"), cur.execute("SELECT MAX(urna_postavka) FROM prosta_dela")]
-    return template('prosta_dela.html', rezultat_iskanja={}, postavka=postavka)
+    cur.execute("SELECT MIN(urna_postavka), MAX(urna_postavka) FROM prosta_dela")
+    postavka = cur.fetchall()
+    print(postavka)
+    return template('prosta_dela.html', rezultat_iskanja={}, postavka=postavka[0])
 
 @route('/student')
 def student():
