@@ -174,8 +174,8 @@ def prosta_dela_student():
 @post('/registracija_podjetje/')
 def registracija_podjetje():
     #Registriraj novo podjetje
-    naziv = request.forms.get('naziv')
-    kraj = request.forms.get('kraj')
+    naziv = request.forms.naziv
+    kraj = request.forms.kraj
     postna_stevilka = request.forms.get('stevilka')
     drzava = request.forms.get('drzava')
     panoga = request.forms.get('panoga')
@@ -203,7 +203,7 @@ def dodaj():
     delovnik = request.forms.get('delovnik')
     postavka = request.forms.get('urna')
     panoga = request.forms.get('panoga1')
-    kraj = request.forms.get('kraj1')
+    kraj = request.forms.kraj1
     posta = request.forms.get('posta1')
     drzava = request.forms.get('drzava1')
     vrsta = request.forms.get('vrsta1')
@@ -222,10 +222,10 @@ def dodaj():
 @post('/registracija_student/')
 def registracija_student():
     #Registriraj novega študenta
-    ime = request.forms.q15_name15[first]
-    priimek = request.forms.q15_name15[last]
-    spol = request.forms.get('q28_areYou')
-    kraj = request.forms.get('q33_address[city]')
+    ime = request.forms.ime2
+    priimek = request.forms.priimek2
+    spol = request.forms.q28_areYou
+    kraj = request.forms.kraj2
     drzava = request.forms.get('q33_address[country]')
     postna_stevilka = request.forms.get('q33_address[postal]')
     uporabnisko_ime = request.forms.get('q34_email')
