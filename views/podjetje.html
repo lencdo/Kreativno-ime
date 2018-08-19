@@ -45,15 +45,17 @@
 
 
     <div class="podjetje">
+    %if podjetje:
 	<nav>
 		<ul>
-	    	    <li><strong>IME:</strong> Podjetje</li>
-	    	    <li><strong>KRAJ:</strong> Ljubljana</li>
-	    	    <li><strong>DRŽAVA:</strong> Slovenija</li>
-	    	    <li><strong>PANOGA:</strong> Engineer</li>
-		    <li><strong>KONTAKT:</strong> 041-654-923</li>
+	    	    <li><strong>IME:</strong>{{podjetje[0]}}</li>
+	    	    <li><strong>KRAJ:</strong> {{podjetje[1]}}</li>
+	    	    <li><strong>DRŽAVA:</strong> {{podjetje[2]}}</li>
+	    	    <li><strong>PANOGA:</strong> {{podjetje[3]}}</li>
+		    <li><strong>KONTAKT:</strong> {{podjetje[4]}}</li>
 		</ul>
     	</nav>
+    %end
     </div>
 
     <div class="gumb">
