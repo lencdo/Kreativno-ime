@@ -204,7 +204,6 @@ def registracija_student():
     kreditna_kartica=request.forms.get('kartica')
     izobrazba=request.forms.get('faks')
 
-    print(ime, priimek, spol, kraj, drzava, postna_stevilka, uporabnisko_ime, geslo1, geslo2, rojstni_datum)
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
     if cur.fetchone():
         # Uporabnik že obstaja
