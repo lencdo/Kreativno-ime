@@ -238,7 +238,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> Naziv podjetja </label>
         <div id="cid_15" class="form-input-wide">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="last_15" name="naziv" class="form-textbox" size="15" value="" data-component="last" type="text">
+              <input id="last_15" name="naziv" class="form-textbox" size="15" value="" data-component="last" type="text" required>
               <label class="form-sub-label" for="last_15" id="sublabel_last" style="min-height:13px"> Naziv podjetja </label>
             </span>
         </div>
@@ -251,7 +251,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
               <tr style="display:none">
                 <td colspan="2">
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <input id="input_33_addr_line1" name="q33_address[addr_line1]" class="form-textbox form-address-line" value="" data-component="address_line_1" type="text">
+                    <input id="input_33_addr_line1" name="q33_address[addr_line1]" class="form-textbox form-address-line" value="" data-component="address_line_1" type="text" required>
                     <label class="form-sub-label" for="input_33_addr_line1" id="sublabel_33_addr_line1" style="min-height:13px"> Street Address </label>
                   </span>
                 </td>
@@ -281,13 +281,13 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
               <tr>
                 <td width="50%">
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <input id="input_33_postal" name="stevilka" class="form-textbox form-address-postal" size="10" value="" data-component="zip" type="text">
+                    <input id="input_33_postal" name="stevilka" class="form-textbox form-address-postal" size="10" value="" data-component="zip" type="number" required>
                     <label class="form-sub-label" for="input_33_postal" id="sublabel_33_postal" style="min-height:13px"> Poštna številka </label>
                   </span>
                 </td>
                 <td>
                   <span class="form-sub-label-container" style="vertical-align:top">
-                    <select class="form-dropdown form-address-country" name="drzava" id="input_33_country" data-component="country">
+                    <select class="form-dropdown form-address-country" name="drzava" id="input_33_country" data-component="country" required>
                       <option value=""> Please Select </option>
                       <option value="United States"> United States </option>
                       <option value="Afghanistan"> Afghanistan </option>
@@ -548,7 +548,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> Panoga </label>
         <div id="cid_15" class="form-input-wide">
 		    <span class="form-sub-label-container" style="vertical-align:top">
-                    <select class="form-dropdown form-address-country" name="panoga" id="input_33_country" data-component="country">
+                    <select class="form-dropdown form-address-country" name="panoga" id="input_33_country" data-component="country" required>
                       <option value=""> Prosim, izberite panogo </option>
  					  <option value=“Account Coordinator“> Account Coordinator </option>
 <option value=“Account Executive“> Account Executive </option>
@@ -742,7 +742,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> IBAN </label>
         <div id="cid_15" class="form-input-wide">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="first_15" name="kartica" class="form-textbox" size="10" value="" data-component="first" type="text">
+              <input id="first_15" name="kartica" class="form-textbox" size="10" value="" data-component="first" type="text" required>
               <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px"> IBAN </label>
             </span>
         </div>
@@ -752,7 +752,7 @@ JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null
         <label class="form-label form-label-top" id="label_15" for="first_15"> Kontakt </label>
         <div id="cid_15" class="form-input-wide">
             <span class="form-sub-label-container" style="vertical-align:top">
-              <input id="first_15" name="takt" class="form-textbox" size="10" value="" data-component="first", type="tel">
+              <input id="first_15" name="takt" class="form-textbox" size="10" value="" data-component="first", type="text" required>
              <label class="form-sub-label" for="first_15" id="sublabel_first" style="min-height:13px"> Kontakt </label>
             </span>
         </div>
