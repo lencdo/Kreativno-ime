@@ -63,7 +63,6 @@ def dodaj():
 def prosta_dela():
     cur.execute("SELECT MIN(urna_postavka), MAX(urna_postavka) FROM prosta_dela")
     postavka = cur.fetchall()
-    print(postavka)
     return template('prosta_dela.html', rezultat_iskanja={}, postavka=postavka[0])
 
 @route('/student')
@@ -109,7 +108,9 @@ def prijava():
             cur.execute("SELECT id FROM podjetja WHERE uporabnisko_ime = %s", [ime])
             aj_di=cur.fetchone()
             response.set_cookie('id', aj_di, path="/", secret='skrivnost')
-            return template('podjetje')
+            cur.execute("SELECT ime, kraj, drzava, panoga, kontakt FROM podjetja WHERE uporabnisko_ime = %s", [ime])
+            argument=cur.fetchall()
+            return template('podjetje', podjetje=argument[0])
         else:
             return template('index', napaka="Nepravilno geslo")
                                   
