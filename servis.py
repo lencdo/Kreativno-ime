@@ -61,10 +61,8 @@ def dodaj():
 
 @route('/prosta_dela')
 def prosta_dela():
-    cur.execute("SELECT MAX(urna_postavka) FROM prosta_dela")
-    maks = cur.fetchone()
-    print(maks)
-    return template('prosta_dela.html', rezultat_iskanja={}, postavka=maks[0])
+    postavka = [cur.execute("SELECT MIN(urna_postavka) FROM prosta_dela"), cur.execute("SELECT MAX(urna_postavka) FROM prosta_dela")]
+    return template('prosta_dela.html', rezultat_iskanja={}, postavka=postavka)
 
 @route('/student')
 def student():
@@ -150,14 +148,14 @@ def registracija_podjetje():
     cur.execute("SELECT 1 FROM podjetja WHERE uporabnisko_ime=%s", [uporabnisko])
     if cur.fetchone():
         # Uporabnik že obstaja
-        return template('index', napaka="Uporabnisko ime ze obstaja")
+        return template('index.html', napaka="Uporabnisko ime ze obstaja")
     elif not geslo1 == geslo2:
-        return template('index', napaka="Gesli se ne ujemata")
+        return template('index.html', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO podjetja (drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime) VALUES (%s, %s, %s, %s, %s, %s, %s)",
               [drzava, naziv, kraj, kartica, panoga, geslo2, uporabnisko])
-        return template("index.html")
+        return template("index.html", napaka=False)
 
 @post('/dodaj/')
 def dodaj():
@@ -202,14 +200,14 @@ def registracija_student():
     if cur.fetchone():
         # Uporabnik že obstaja
         return template('index', napaka="Uporabnisko ime ze obstaja")
-        return template("registracija_podjetje.html")
+        return template("registracija_student.html")
     elif not geslo1 == geslo2:
-        return template('index', napaka="Gesli se ne ujemata")
+        return template('index.html', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
               (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1))
-        return template("index.html")
+        return template("index.html", napaka=False)
  
         # Daj uporabniku cookie
 ##        bottle.response.set_cookie('username', username, path='/', secret=secret)
@@ -229,4 +227,4 @@ def static(filename):
     return static_file(filename, root='assets')
 
 # poženemo strežnik na portu 8080, glej http://localhost:8080/
-run(host='localhost', port=8080)
+run(host='localhost', port=8081)
