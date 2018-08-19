@@ -67,9 +67,9 @@
 		</li>
 
 	        <li><a href="#">Urna postavka</a>
-	    	    %for (min, max) in iskanje:
+	    	    %if postavka:
 		    <ul>
-			<li><input type="range" min="{{min}}" max="{{max}}" value="{{min}}" class="slider" id="myRange" name="postavka">
+			<li><input type="range" min="{{postavka[0]}}" max="{{postavka[1]}}" value="{{postavka[0]}}" class="slider" id="myRange" name="postavka">
 				<p>Minimalna postavka: <span id="demo"></span></p>
 				<script>
 				    var slider = document.getElementById("myRange");
