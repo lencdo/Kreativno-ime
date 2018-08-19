@@ -153,6 +153,7 @@ def registracija_podjetje():
     uporabnisko = request.forms.get('uporabnisko')
     geslo1 = request.forms.get('geslo1')
     geslo2 = request.forms.get('geslo2')
+    kontakt = request.forms.get('takt')
 
     cur.execute("SELECT 1 FROM podjetja WHERE uporabnisko_ime=%s", [uporabnisko])
     if cur.fetchone():
@@ -162,8 +163,8 @@ def registracija_podjetje():
         return template('index.html', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
-        cur.execute("INSERT INTO podjetja (drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-              [drzava, naziv, kraj, kartica, panoga, geslo2, uporabnisko])
+        cur.execute("INSERT INTO podjetja (drzava, ime, kraj, bancni_racun, panoga, geslo, uporabnisko_ime, kontakt) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
+              [drzava, naziv, kraj, kartica, panoga, geslo2, uporabnisko, kontakt])
         return template("index.html", napaka=False)
 
 @post('/dodaj/')
