@@ -72,7 +72,9 @@ def student():
 
 @route('/prosta_dela_student')
 def prosta_dela():
-    return template('prosta_dela_student.html')
+    cur.execute("SELECT MIN(urna_postavka), MAX(urna_postavka) FROM prosta_dela")
+    postavka=cur.fetchall()
+    return template('prosta_dela_student.html', rezultat_iskanja={}, postavka=postavka[0])
 
 @route('/registracija')
 def prosta_dela():
@@ -93,7 +95,9 @@ def prijava():
         if aa == None:
             return template('index', napaka="Uporabnisko ime ne obstaja")
         elif aa[0] == ugeslo:
-            return template('student')
+            cur.execute("SELECT CONCAT(ime, ' ', priimek), rojstni_dan, studenti.kraj, studenti.drzava, naziv FROM studenti INNER JOIN univerze ON studenti.izobrazba=univerze.id WHERE uporabnisko_ime = %s", [ime])
+            prepoznaj = cur.fetchall()
+            return template('student', student=prepoznaj[0])
         else:
             return template('index', napaka="Nepravilno geslo")
     else:
@@ -132,7 +136,9 @@ def index():
     postavka = request.forms.get('postavka')
     cur.execute("SELECT podjetja.ime, urna_postavka, prosta_dela.kraj, izobrazba, delovnik, vrsta, podjetja.kontakt FROM prosta_dela INNER JOIN podjetja ON prosta_dela.podjetje=podjetja.id WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
     vrni=cur.fetchall()
-    return template('prosta_dela.html', rezultat_iskanja=vrni)
+    cur.execute("SELECT MIN(urna_postavka), MAX(urna_postavka) FROM prosta_dela")
+    postav = cur.fetchall()
+    return template('prosta_dela.html', rezultat_iskanja=vrni, postavka=postav[0])
 
 @post('/registracija_podjetje/')
 def registracija_podjetje():
