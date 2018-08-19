@@ -120,7 +120,6 @@ def prijava():
 @post('/prosta_dela/')
 def prosta_dela():
     ##"""Išči prosta dela."""
-    print("usaj mal delam")
     kratkotrajno = request.forms.get('vrsta1')
     dolgotrajno = request.forms.get('vrsta2')
     pocitnisko = request.forms.get('vrsta3')
@@ -228,9 +227,9 @@ def registracija_student():
     kraj = request.forms.kraj2
     drzava = request.forms.get('q33_address[country]')
     postna_stevilka = request.forms.get('q33_address[postal]')
-    uporabnisko_ime = request.forms.get('q34_email')
-    geslo1 = request.forms.get('q30_email30')
-    geslo2 = request.forms.get('q30_email30')
+    uporabnisko_ime = request.forms.q34_email
+    geslo1 = request.forms.vnesi
+    geslo2 = request.forms.potrdi
     rojstni_datum = request.forms.get('datuum')
     kreditna_kartica=request.forms.get('kartica')
     izobrazba=request.forms.faks
