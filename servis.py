@@ -233,7 +233,10 @@ def registracija_student():
     geslo2 = request.forms.get('q30_email30')
     rojstni_datum = request.forms.get('datuum')
     kreditna_kartica=request.forms.get('kartica')
-    izobrazba=request.forms.
+    izobrazba=request.forms.faks
+    print(izobrazba)
+    ustav=izobrazba[0]
+    print(ustav)
     
 
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
@@ -246,7 +249,7 @@ def registracija_student():
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1))
+              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, ustav))
         return template("index.html", napaka=False)
  
         # Daj uporabniku cookie
