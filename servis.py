@@ -214,8 +214,8 @@ def registracija_student():
         return template('index.html', napaka="Gesli se ne ujemata")
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
-        cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1))
+        cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, izobrazba))
         return template("index.html", napaka=False)
  
         # Daj uporabniku cookie
