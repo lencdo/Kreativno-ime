@@ -64,9 +64,9 @@
 		</li>
 
 	        <li><a href="#">Urna postavka</a>
-	    	
+		%if postavka:
 		    <ul>
-			<li><input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="postavka">
+			<li><input type="range" min="{{postavka[0]}}" max="{{postavka[1]}}" value="{{postavka[0]}}" class="slider" id="myRange" name="postavka">
 				<p>Minimalna postavka: <span id="demo"></span></p>
 				<script>
 				    var slider = document.getElementById("myRange");
@@ -82,6 +82,7 @@
 			</li>
 
 		    </ul>
+		    %end
 		</li>
 		<li><button type="submit" href="#">Išči</button></li>
 	    </ul>
@@ -90,30 +91,33 @@
 	</form>	
     </div>
 
-
+    %for rezultat in rezultat_iskanja:
     <div class="delo">
 	<nav>
-	    <p>delo</p>
+	    <p>{{rezultat[0]}}</p>
 	    <ul>
 		<li>
-		    <p>Urna postavka: 5€/h</p>
+		    <p>Urna postavka: {{rezultat[1]}}€/h</p>
 		</li>
 		<li>
-		    <p>Delovnik: Izmensko</p>
+		    <p>Kraj:{{rezultat[2]}}</p>
 		</li>
 		<li>
-		    <p>Vrsta oglasa: Kratkotrajno delo</p>
+		    <p>Izobrazba:{{rezultat[3]}}</p>
 		</li>
 		<li>
-		    <p>Šifra:000000</p>
+		    <p>Delovnik: {{rezultat[4]}}</p>
 		</li>
 		<li>
-		    <p>Kontakt: email@gmail.com</p>
+		    <p>Vrsta oglasa: {{rezultat[5]}}</p>
+		</li>
+		<li>
+		    <p>Kontakt: {{rezultat[6]}}</p>
 		</li>
 	    </ul>
 	</nav>
 
     </div>
-
+    %end
 </body>
 </html>

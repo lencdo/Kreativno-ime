@@ -43,15 +43,17 @@
 <body>
 
     <div class="student">
+    %if student:
 	<nav>
 		<ul>
-	    	    <li><strong>IME:</strong>Janez Novak</li>
-	    	    <li><strong>DATUM ROJSTVA:</strong>01.01.1997</li>
-	    	    <li><strong>KRAJ:</strong>Ljubljana</li>
-	    	    <li><strong>DRŽAVA:</strong>Slovenija</li>
-	    	    <li><strong>IZOBRAZBA:</strong>FMF</li>
+	    	    <li><strong>IME:</strong>{{student[0]}}</li>
+	    	    <li><strong>DATUM ROJSTVA:</strong>{{student[1]}}</li>
+	    	    <li><strong>KRAJ:</strong>{{student[2]}}</li>
+	    	    <li><strong>DRŽAVA:</strong>{{student[3]}}</li>
+	    	    <li><strong>IZOBRAZBA:</strong>{{student[4]}}</li>
 		</ul>
     	</nav>
+    %end
     </div>
 
     <div class="gumb">
