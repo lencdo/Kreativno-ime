@@ -117,9 +117,10 @@ def prijava():
             return template('index', napaka="Nepravilno geslo")
                                   
 
-@post('/')
-def index():
+@post('/prosta_dela/')
+def prosta_dela():
     ##"""Išči prosta dela."""
+    print("usaj mal delam")
     kratkotrajno = request.forms.get('vrsta1')
     dolgotrajno = request.forms.get('vrsta2')
     pocitnisko = request.forms.get('vrsta3')
@@ -142,6 +143,33 @@ def index():
     cur.execute("SELECT MIN(urna_postavka), MAX(urna_postavka) FROM prosta_dela")
     postav = cur.fetchall()
     return template('prosta_dela.html', rezultat_iskanja=vrni, postavka=postav[0])
+
+@post('/prosta_dela_student/')
+def prosta_dela_student():
+    ##"""Išči prosta dela."""
+    kratkotrajno = request.forms.get('vrsta1')
+    dolgotrajno = request.forms.get('vrsta2')
+    pocitnisko = request.forms.get('vrsta3')
+    L = tuple(filter(None, [kratkotrajno, dolgotrajno, pocitnisko]))
+    dol=len(L)
+    if dol == 0:
+        L=('kratkotrajno', 'dolgotrajno', 'pocitnisko')
+
+    delovnik1 = request.forms.get('delovnik1')
+    delovnik2 = request.forms.get('delovnik2')
+    delovnik3 = request.forms.get('delovnik3')
+    delovnik4 = request.forms.get('delovnik4')
+    D = tuple(filter(None, [delovnik1, delovnik2, delovnik3, delovnik4]))
+    dol2=len(D)
+    if dol2 == 0:
+        D=('dopoldne', 'popoldne', 'izmensko', 'med vikendom')
+    postavka = request.forms.get('postavka')
+    cur.execute("SELECT podjetja.ime, urna_postavka, prosta_dela.kraj, izobrazba, delovnik, vrsta, podjetja.kontakt FROM prosta_dela INNER JOIN podjetja ON prosta_dela.podjetje=podjetja.id WHERE delovnik IN %s AND vrsta IN %s AND urna_postavka >= %s" , [D, L, postavka])
+    vrni=cur.fetchall()
+    print(vrni)
+    cur.execute("SELECT MIN(urna_postavka), MAX(urna_postavka) FROM prosta_dela")
+    postav = cur.fetchall()
+    return template('prosta_dela_student.html', rezultat_iskanja=vrni, postavka=postav[0])
 
 @post('/registracija_podjetje/')
 def registracija_podjetje():
@@ -205,7 +233,8 @@ def registracija_student():
     geslo2 = request.forms.get('q30_email30')
     rojstni_datum = request.forms.get('datuum')
     kreditna_kartica=request.forms.get('kartica')
-    izobrazba=request.forms.faks
+    izobrazba=request.forms.
+    
 
     cur.execute("SELECT 1 FROM studenti WHERE uporabnisko_ime=%s", [uporabnisko_ime])
     if cur.fetchone():
@@ -217,7 +246,7 @@ def registracija_student():
     else:
         # Vse je v redu, vstavi novega uporabnika v bazo
         cur.execute("INSERT INTO studenti(ime, priimek, spol, rojstni_dan, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo, izobrazba) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
-              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1, naziv[0]))
+              (ime, priimek, spol, rojstni_datum, drzava, kraj, postna_stevilka, kreditna_kartica, uporabnisko_ime, geslo1))
         return template("index.html", napaka=False)
  
         # Daj uporabniku cookie

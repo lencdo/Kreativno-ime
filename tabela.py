@@ -20,7 +20,7 @@ def ustvari_tabelo_studenti():
             kreditna_kartica TEXT NOT NULL,
             uporabnisko_ime TEXT NOT NULL,
             geslo TEXT NOT NULL,
-            izobrazba INTEGER REFERENCES univerze(id)
+            izobrazba INTEGER NOT NULL REFERENCES univerze(id)
         );
     """)
     conn.commit()
